@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -191,8 +190,9 @@
 
                 <div class="grieta-imagen">
                     <img
-                        src="img/Grieta.png"
+                        src="img/Grieta.jpg"
                         alt="Mapa de la Grieta del Invocador"
+                        loading="lazy"
                     >
                 </div>
 
@@ -287,6 +287,32 @@
                 </p>
             </div>
 
+            <!-- MAPA TÁCTICO -->
+
+            <div class="posiciones-mapa">
+
+                <img
+                    src="img/mapas%20y%20posiciones.jpg"
+                    alt="Mapa táctico de las posiciones en la Grieta del Invocador"
+                    loading="lazy"
+                >
+
+                <div>
+                    <span>CONTROL DEL MAPA</span>
+
+                    <h3>Cinco jugadores. Un mismo objetivo.</h3>
+
+                    <p>
+                        Cada posición ocupa un sector del mapa y cumple
+                        una función importante. Conocer su ubicación
+                        permite comprender mejor los movimientos del equipo.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- FUNCIONES DE CADA POSICIÓN -->
+
             <div class="posiciones-grid">
 
                 <article class="posicion-card">
@@ -356,6 +382,16 @@
                     Cada campeón posee habilidades y características
                     que definen su manera de combatir.
                 </p>
+            </div>
+
+            <!-- IMAGEN GENERAL DE CAMPEONES -->
+
+            <div class="campeones-portada">
+                <img
+                    src="img/campeones.jpg"
+                    alt="Collage de campeones de League of Legends"
+                    loading="lazy"
+                >
             </div>
 
             <div class="campeones-grid">
@@ -434,8 +470,9 @@
 
                 <div class="objetivos-imagen">
                     <img
-                        src="img/objetos.png"
-                        alt="Objetivos importantes de League of Legends"
+                        src="img/objetivos.jpg"
+                        alt="Combate contra el Barón Nashor en League of Legends"
+                        loading="lazy"
                     >
                 </div>
 
@@ -453,28 +490,45 @@
 
                     <div class="objetivo-item">
                         <span>01</span>
+
                         <div>
                             <h3>Dragones</h3>
                             <p>
                                 Monstruos neutrales que proporcionan
                                 mejoras al equipo.
                             </p>
+
+                            <img
+                                class="objetivo-imagen-secundaria"
+                                src="img/dragones.jpg"
+                                alt="Dragones elementales de League of Legends"
+                                loading="lazy"
+                            >
                         </div>
                     </div>
 
                     <div class="objetivo-item">
                         <span>02</span>
+
                         <div>
                             <h3>Barón Nashor</h3>
                             <p>
                                 Su eliminación proporciona una mejora
                                 importante para el equipo.
                             </p>
+
+                            <img
+                                class="objetivo-imagen-secundaria"
+                                src="img/objetos.jpg"
+                                alt="Ilustración del Barón Nashor"
+                                loading="lazy"
+                            >
                         </div>
                     </div>
 
                     <div class="objetivo-item">
                         <span>03</span>
+
                         <div>
                             <h3>Torretas y Nexo</h3>
                             <p>
@@ -482,6 +536,13 @@
                                 hacia la base rival. El Nexo es
                                 el objetivo final.
                             </p>
+
+                            <img
+                                class="objetivo-imagen-secundaria"
+                                src="img/nexo.jpg"
+                                alt="Nexo de una base de League of Legends"
+                                loading="lazy"
+                            >
                         </div>
                     </div>
 
@@ -528,6 +589,12 @@
                         Diez jugadores se enfrentan en una única
                         línea con campeones aleatorios.
                     </p>
+
+                    <img
+                        src="img/ARAm.jpg"
+                        alt="Escenario del modo de juego ARAM"
+                        loading="lazy"
+                    >
                 </article>
 
             </div>
@@ -579,6 +646,7 @@
 
                 <div class="campo-perfil">
                     <label for="nombre">Nombre:</label>
+
                     <input
                         type="text"
                         id="nombre"
@@ -592,6 +660,7 @@
 
                 <div class="campo-perfil">
                     <label for="edad">Edad:</label>
+
                     <input
                         type="number"
                         id="edad"
@@ -605,6 +674,7 @@
 
                 <div class="campo-perfil">
                     <label for="horas">Horas de juego por semana:</label>
+
                     <input
                         type="number"
                         id="horas"
@@ -641,6 +711,8 @@
 
     </footer>
 
+
+    <!-- JAVASCRIPT -->
 
     <script src="js/script.js"></script>
 

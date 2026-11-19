@@ -1171,3 +1171,543 @@ body[data-protected="true"] {
         gap: 3px;
     }
 }
+
+/* ========================================
+   28. AJUSTES DE LA ESTRUCTURA ACTUAL
+======================================== */
+
+/* Títulos de secciones */
+
+.portal-main .titulo-seccion {
+    margin-bottom: 25px;
+}
+
+.titulo-seccion > span,
+.etiqueta {
+    display: inline-block;
+    color: var(--celeste);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.titulo-seccion h2 {
+    margin-bottom: 12px;
+}
+
+.titulo-seccion p {
+    max-width: 650px;
+}
+
+
+/* Botón principal */
+
+.portal-main .boton-portal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 23px;
+    margin-top: 15px;
+    background: linear-gradient(110deg, var(--violeta), #b44de5);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.portal-main .boton-portal:hover {
+    background: var(--celeste);
+    color: var(--fondo);
+    transform: translateY(-3px);
+}
+
+
+
+/* ========================================
+   29. TARJETAS DE EXPLORACIÓN
+======================================== */
+
+.portal-main .explorar-grid {
+    gap: 18px;
+}
+
+.portal-main .explorar-card {
+    position: relative;
+    min-height: 205px;
+    justify-content: flex-end;
+    overflow: hidden;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    border-radius: 14px;
+    box-shadow: inset 0 0 35px rgba(8, 8, 18, 0.35);
+    transition: 0.3s;
+}
+
+/* Imágenes de fondo con menor intensidad */
+
+.explorar-grieta {
+    background-image:
+        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
+        url("../img/Grieta.jpg");
+}
+
+.explorar-posiciones {
+    background-image:
+        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
+        url("../img/mapas%20y%20posiciones.jpg");
+}
+
+.explorar-campeones {
+    background-image:
+        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
+        url("../img/campeones.jpg");
+}
+
+.explorar-objetivos {
+    background-image:
+        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
+        url("../img/objetivos.jpg");
+}
+
+.explorar-card span,
+.explorar-card h3,
+.explorar-card p,
+.explorar-card b {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.explorar-card h3 {
+    font-size: 1.5rem;
+}
+
+.explorar-card p {
+    font-size: 0.9rem;
+    margin: 4px 0 12px;
+}
+
+.explorar-card b {
+    color: var(--celeste);
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+}
+
+.explorar-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--celeste);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.12);
+}
+
+/* ========================================
+   30. INTRODUCCIÓN Y CARACTERÍSTICAS
+======================================== */
+
+.introduccion-texto {
+    max-width: 800px;
+}
+
+.introduccion-texto h2 {
+    font-size: 2.3rem;
+}
+
+.numero-card {
+    display: block;
+    color: var(--rosa);
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.caracteristica-card {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.caracteristica-card:hover {
+    border-color: var(--violeta);
+    transform: translateY(-4px);
+}
+
+
+/* ========================================
+   31. GRIETA DEL INVOCADOR
+======================================== */
+
+.grieta-section .grieta-panel {
+    overflow: hidden;
+}
+
+.grieta-imagen img {
+    transition: transform .5s ease;
+}
+
+.grieta-imagen {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.grieta-imagen:hover img {
+    transform: scale(1.04);
+}
+
+.grieta-info .etiqueta {
+    margin-bottom: 10px;
+}
+
+.linea-card > span {
+    display: inline-block;
+    color: var(--rosa);
+    font-size: .8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   32. MAPA Y POSICIONES
+======================================== */
+
+.posiciones-mapa {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 25px;
+    padding: 22px;
+    margin-bottom: 25px;
+    background: linear-gradient(120deg, #17152b, #10101e);
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+}
+
+.posiciones-mapa img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.posiciones-mapa span {
+    color: var(--celeste);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.posiciones-mapa h3 {
+    color: white;
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.posiciones-mapa p {
+    margin: 0;
+}
+
+.posicion-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 230px;
+}
+
+.posicion-numero {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: rgba(255,255,255,.12);
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+.posicion-icono {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    background: rgba(139,92,246,.2);
+    border: 1px solid var(--violeta);
+    border-radius: 12px;
+    color: var(--celeste);
+    font-weight: 900;
+}
+
+.posicion-card p {
+    font-size: .88rem;
+}
+
+
+/* ========================================
+   33. CAMPEONES
+======================================== */
+
+.campeones-section .campeon-card {
+    position: relative;
+    min-height: 185px;
+    overflow: hidden;
+}
+
+.campeon-numero {
+    color: rgba(236,72,153,.25);
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.campeon-card > span {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--celeste);
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+
+/* ========================================
+   34. OBJETIVOS
+======================================== */
+
+.objetivos-section .objetivos-panel {
+    overflow: hidden;
+}
+
+.objetivos-imagen {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.objetivos-imagen img {
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.objetivos-imagen:hover img {
+    transform: scale(1.04);
+}
+
+.objetivos-contenido h2 {
+    color: white;
+    font-size: 2.2rem;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.objetivo-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.objetivo-item > span {
+    min-width: 35px;
+    color: var(--rosa);
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+.objetivo-item h3 {
+    color: var(--celeste);
+}
+
+.objetivo-imagen-secundaria {
+    display: block;
+    width: 100%;
+    max-width: 210px;
+    height: 105px;
+    margin-top: 12px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--borde);
+}
+
+
+/* ========================================
+   35. MODOS DE JUEGO
+======================================== */
+
+.modos-section .modo-card {
+    min-height: 180px;
+    transition: .3s;
+}
+
+.modo-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--celeste);
+}
+
+.modo-card > span {
+    display: block;
+    color: var(--rosa);
+    font-size: .8rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+
+/* ========================================
+   36. CONSEJOS Y PERFIL
+======================================== */
+
+.consejos-titulo {
+    margin-bottom: 20px;
+}
+
+.perfil-intro {
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
+.campo-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo-perfil label {
+    margin: 0;
+}
+
+.campo-perfil input {
+    width: 100%;
+}
+
+.perfil-form #mensajeGamer {
+    color: var(--celeste);
+}
+
+
+/* ========================================
+   37. RESPONSIVE ADICIONAL
+======================================== */
+
+@media (max-width: 700px) {
+
+    .posiciones-mapa {
+        grid-template-columns: 1fr;
+    }
+
+    .posiciones-mapa img {
+        height: 220px;
+    }
+
+    .objetivos-imagen img {
+        height: 270px;
+    }
+
+    .objetivos-contenido h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .portal-main .explorar-card {
+        min-height: 180px;
+    }
+
+    .posicion-card {
+        min-height: 190px;
+    }
+
+    .posiciones-mapa {
+        padding: 14px;
+    }
+}
+
+/* ========================================
+   38. AJUSTE DE TAMAÑO E INTENSIDAD
+======================================== */
+
+/* Grieta */
+
+.grieta-imagen img {
+    height: 270px;
+    filter: brightness(0.82) saturate(0.88);
+}
+
+/* Mapa de posiciones */
+
+.posiciones-mapa img {
+    height: 210px;
+    filter: brightness(0.82) saturate(0.88);
+}
+
+/* Portada de campeones */
+
+.campeones-portada {
+    overflow: hidden;
+    max-width: 850px;
+    margin: 0 auto 25px;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+}
+
+.campeones-portada img {
+    display: block;
+    width: 100%;
+    max-height: 230px;
+    object-fit: cover;
+    filter: brightness(0.82) saturate(0.88);
+}
+
+/* Objetivos */
+
+.objetivos-imagen img {
+    height: 300px;
+    filter: brightness(0.82) saturate(0.88);
+}
+
+/* Imágenes secundarias */
+
+.objetivo-imagen-secundaria {
+    max-width: 165px;
+    height: 85px;
+    filter: brightness(0.85) saturate(0.88);
+}
+
+/* Transiciones */
+
+.grieta-imagen img,
+.posiciones-mapa img,
+.campeones-portada img,
+.objetivos-imagen img,
+.objetivo-imagen-secundaria {
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.grieta-imagen:hover img,
+.objetivos-imagen:hover img {
+    filter: brightness(0.95) saturate(0.95);
+}
+
+@media (max-width: 700px) {
+    .grieta-imagen img {
+        height: 230px;
+    }
+
+    .posiciones-mapa img {
+        height: 190px;
+    }
+
+    .objetivos-imagen img {
+        height: 250px;
+    }
+
+    .campeones-portada img {
+        max-height: 180px;
+    }
+}
