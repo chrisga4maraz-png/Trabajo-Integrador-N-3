@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming o Nada - Inicio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Gaming o Nada</h1>
+    <p>Espacio dedicado a League of Legends.</p>
+  </header>
+
+  <main>
+    <section class="contenido">
+      <h2>League of Legends</h2>
+      <img src="img/lol-logo-rendered-hi-res.png" alt="Logo de League of Legends" width="200">
+      <p>Videojuego competitivo basado en estrategia y trabajo en equipo.</p>
+      
+      <h3>Características</h3>
+      <ul>
+        <li>Estrategia</li>
+        <li>Competencia</li>
+        <li>Trabajo en equipo</li>
+      </ul>
+
+      <h3>Claves para mejorar</h3>
+      <ol>
+        <li>Practicar.</li>
+        <li>Aprender de los errores.</li>
+        <li>Trabajar en equipo.</li>
+      </ol>
+
+      <blockquote>"La estrategia es clave para alcanzar la victoria."</blockquote>
+    </section>
+
+    <section class="formulario">
+      <h2>Formulario Gamer</h2>
+      <form id="formularioGamer">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" minlength="3" maxlength="30" required>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="13" max="100" required>
+
+        <label for="horas">Horas de juego:</label>
+        <input type="number" id="horas" name="horas" min="0" max="168" required>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section class="calculadora">
+      <h2>Calculadora Gamer</h2>
+      <label for="numero1">Primer número:</label>
+      <input id="numero1" type="number" step="any">
+
+      <label for="numero2">Segundo número:</label>
+      <input id="numero2" type="number" step="any">
+
+      <div class="operadores" aria-label="Operaciones">
+        <button type="button" data-operacion="+">+</button>
+        <button type="button" data-operacion="-">−</button>
+        <button type="button" data-operacion="*">×</button>
+        <button type="button" data-operacion="/">÷</button>
+      </div>
+
+      <label for="resultado">Resultado:</label>
+      <input id="resultado" type="text" readonly>
+      <p id="mensaje" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>EDI I - Tecnicatura Superior en Análisis de Sistemas - 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
