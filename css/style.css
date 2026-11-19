@@ -1,9 +1,7 @@
-
 /* ========================================
    GAMING O NADA
-   Hoja de estilos principal
+   Hoja de estilos principal optimizada
 ======================================== */
-
 
 /* ========================================
    1. CONFIGURACIÓN GENERAL
@@ -30,6 +28,7 @@ html {
     min-height: 100%;
     background-color: var(--fondo);
     scroll-behavior: smooth;
+    scroll-padding-top: 125px;
 }
 
 body {
@@ -41,17 +40,16 @@ body {
     line-height: 1.6;
 }
 
-
 /* ========================================
-   2. ENCABEZADO GENERAL
+   2. ESTRUCTURA Y ELEMENTOS GENERALES
 ======================================== */
 
 header {
-    background: linear-gradient(120deg, #17102b, #241044);
     padding: 30px 20px;
-    text-align: center;
+    background: linear-gradient(120deg, #17102b, #241044);
     border-bottom: 3px solid var(--violeta);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+    text-align: center;
 }
 
 header h1 {
@@ -67,9 +65,48 @@ header p {
     margin-top: 5px;
 }
 
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+section {
+    padding: 30px;
+    margin-bottom: 25px;
+    background: var(--fondo-secundario);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+section h2 {
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+    border-bottom: 2px solid var(--violeta);
+    font-size: 1.7rem;
+}
+
+section h3 {
+    margin-bottom: 8px;
+}
+
+section p {
+    margin-bottom: 15px;
+    color: var(--texto-secundario);
+}
+
+section ul {
+    padding-left: 25px;
+    color: var(--texto-secundario);
+}
+
+section li {
+    margin-bottom: 8px;
+}
 
 /* ========================================
-   3. MENÚ DE NAVEGACIÓN
+   3. NAVEGACIÓN GENERAL
 ======================================== */
 
 nav {
@@ -82,13 +119,13 @@ nav details {
 }
 
 nav summary {
-    list-style: none;
-    cursor: pointer;
     padding: 10px 25px;
     background: var(--violeta);
     border-radius: 8px;
     color: white;
     font-weight: bold;
+    cursor: pointer;
+    list-style: none;
     transition: 0.3s;
 }
 
@@ -110,13 +147,13 @@ nav details ul {
     position: absolute;
     top: 110%;
     left: 0;
+    z-index: 10;
     width: 190px;
-    list-style: none;
+    overflow: hidden;
     background: var(--fondo-secundario);
     border: 1px solid var(--violeta);
     border-radius: 8px;
-    overflow: hidden;
-    z-index: 10;
+    list-style: none;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -133,64 +170,16 @@ nav details li a:hover {
     color: white;
 }
 
-
 /* ========================================
-   4. CONTENIDO GENERAL
-======================================== */
-
-main {
-    width: 90%;
-    max-width: 1100px;
-    margin: 35px auto;
-}
-
-section {
-    background: var(--fondo-secundario);
-    padding: 30px;
-    margin-bottom: 25px;
-    border: 1px solid var(--borde);
-    border-radius: 14px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
-}
-
-section h2 {
-    color: var(--celeste);
-    font-size: 1.7rem;
-    margin-bottom: 18px;
-    border-bottom: 2px solid var(--violeta);
-    padding-bottom: 10px;
-}
-
-section h3 {
-    color: var(--rosa);
-    margin-bottom: 8px;
-}
-
-section p {
-    color: var(--texto-secundario);
-    margin-bottom: 15px;
-}
-
-section ul {
-    padding-left: 25px;
-    color: var(--texto-secundario);
-}
-
-section li {
-    margin-bottom: 8px;
-}
-
-
-/* ========================================
-   5. FORMULARIO DE ACCESO
+   4. FORMULARIO DE ACCESO
 ======================================== */
 
 .login-main {
-    max-width: 550px;
-    min-height: 55vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 550px;
+    min-height: 55vh;
 }
 
 .login-section {
@@ -198,17 +187,13 @@ section li {
     border-top: 3px solid var(--violeta);
 }
 
-.login-section h2 {
-    text-align: center;
-}
-
+.login-section h2,
 .login-section > p {
     text-align: center;
 }
 
-
 /* ========================================
-   6. IMAGEN PRINCIPAL
+   5. IMÁGENES GENERALES
 ======================================== */
 
 .logo-lol {
@@ -220,15 +205,14 @@ section li {
     border-radius: 10px;
 }
 
-
 /* ========================================
-   7. TARJETAS Y CONTENIDO
+   6. TARJETAS Y CONTENIDO GENERAL
 ======================================== */
 
 article {
-    background: #1c1c35;
     padding: 20px;
     margin: 15px 0;
+    background: #1c1c35;
     border-left: 4px solid var(--violeta);
     border-radius: 8px;
     transition: 0.3s;
@@ -240,8 +224,8 @@ article:hover {
 }
 
 blockquote {
-    margin-top: 20px;
     padding: 18px;
+    margin-top: 20px;
     background: rgba(139, 92, 246, 0.12);
     border-left: 4px solid var(--celeste);
     border-radius: 6px;
@@ -249,9 +233,8 @@ blockquote {
     font-style: italic;
 }
 
-
 /* ========================================
-   8. FORMULARIOS E INPUTS
+   7. FORMULARIOS E INPUTS
 ======================================== */
 
 form {
@@ -262,9 +245,9 @@ form {
 }
 
 label {
+    margin-top: 5px;
     color: var(--texto);
     font-weight: 600;
-    margin-top: 5px;
 }
 
 input,
@@ -296,9 +279,8 @@ textarea {
     resize: vertical;
 }
 
-
 /* ========================================
-   9. BOTONES
+   8. BOTONES GENERALES
 ======================================== */
 
 button {
@@ -324,9 +306,8 @@ button:active {
     transform: scale(0.98);
 }
 
-
 /* ========================================
-   10. CALCULADORA
+   9. CALCULADORA
 ======================================== */
 
 .operaciones {
@@ -340,9 +321,8 @@ button:active {
     margin-top: 0;
 }
 
-
 /* ========================================
-   11. VENTANA EMERGENTE
+   10. VENTANA EMERGENTE
 ======================================== */
 
 .modal-overlay {
@@ -366,20 +346,20 @@ button:active {
     width: 100%;
     max-width: 430px;
     padding: 35px 30px;
-    text-align: center;
     background: linear-gradient(145deg, #17102b, #141428);
     border: 1px solid var(--violeta);
     border-radius: 18px;
     box-shadow: 0 0 35px rgba(139, 92, 246, 0.25);
+    text-align: center;
     animation: aparecerVentana 0.3s ease;
 }
 
 .modal-icono {
-    width: 75px;
-    height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 75px;
+    height: 75px;
     margin: 0 auto 20px;
     border: 3px solid #4ade80;
     border-radius: 50%;
@@ -390,14 +370,14 @@ button:active {
 }
 
 .modal-contenido h2 {
+    margin-bottom: 12px;
     color: var(--celeste);
     font-size: 1.7rem;
-    margin-bottom: 12px;
 }
 
 .modal-contenido p {
-    color: var(--texto-secundario);
     margin-bottom: 20px;
+    color: var(--texto-secundario);
 }
 
 .modal-contenido button {
@@ -422,9 +402,8 @@ button:active {
     }
 }
 
-
 /* ========================================
-   12. CONTORNOS NEÓN ANIMADOS
+   11. CONTORNOS NEÓN ANIMADOS
 ======================================== */
 
 header h1,
@@ -437,16 +416,12 @@ section h3 {
 }
 
 header h1 {
-    text-shadow:
-        0 0 2px #22d3ee,
-        0 0 8px rgba(34, 211, 238, 0.35);
+    text-shadow: 0 0 2px #22d3ee, 0 0 8px rgba(34, 211, 238, 0.35);
 }
 
 section h2,
 section h3 {
-    text-shadow:
-        0 0 2px #8b5cf6,
-        0 0 7px rgba(139, 92, 246, 0.3);
+    text-shadow: 0 0 2px #8b5cf6, 0 0 7px rgba(139, 92, 246, 0.3);
 }
 
 @keyframes contornoNeon {
@@ -464,12 +439,9 @@ section h3 {
     }
 }
 
-
 /* ========================================
-   13. PORTAL GAMING O NADA
+   12. PORTAL GAMING O NADA
 ======================================== */
-
-/* Fondo y estructura principal */
 
 body[data-protected="true"] {
     background:
@@ -479,52 +451,60 @@ body[data-protected="true"] {
 }
 
 .portal-header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    min-height: 100px;
     gap: 25px;
-    padding: 22px 6%;
-    background: rgba(10, 9, 24, 0.96);
+    padding: 18px 4%;
+    background: rgba(10, 9, 24, 0.97);
     border-bottom: 1px solid rgba(139, 92, 246, 0.55);
     text-align: left;
+    backdrop-filter: blur(12px);
 }
 
 .portal-header h1 {
     font-size: 1.2rem;
 }
 
-.portal-main {
-    width: min(1200px, 92%);
-    max-width: none;
-    margin: 35px auto 70px;
-    background: transparent;
-}
-
-.portal-main section {
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 35px 0;
-    margin-bottom: 25px;
-}
-
-.portal-main section h2 {
-    font-size: 2rem;
-}
-
-.portal-main p {
-    color: var(--texto-secundario);
+.portal-header .marca {
+    flex-shrink: 0;
 }
 
 .portal-header nav {
     margin-top: 0;
 }
 
-.portal-header nav details ul {
-    right: 0;
-    left: auto;
+.portal-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+}
+
+.portal-nav a {
+    display: inline-block;
+    padding: 9px 11px;
+    color: var(--texto-secundario);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.portal-nav a:hover {
+    background: var(--violeta);
+    color: white;
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.3);
 }
 
 .marca {
@@ -539,8 +519,8 @@ body[data-protected="true"] {
     justify-content: center;
     width: 48px;
     height: 48px;
-    border-radius: 12px;
     background: linear-gradient(135deg, var(--violeta), var(--rosa));
+    border-radius: 12px;
     color: white;
     font-size: 1.3rem;
     font-weight: 900;
@@ -558,20 +538,68 @@ body[data-protected="true"] {
     color: var(--celeste);
 }
 
+.portal-main {
+    width: min(1200px, 92%);
+    max-width: none;
+    margin: 35px auto 70px;
+    padding-top: 105px;
+    background: transparent;
+}
+
+.portal-main section {
+    padding: 35px 0;
+    margin-bottom: 25px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.portal-main section h2 {
+    font-size: 2rem;
+}
+
+.portal-main p {
+    color: var(--texto-secundario);
+}
+
+.portal-main,
+.portal-main section,
+.portal-main article {
+    color: var(--texto);
+}
+
+.portal-main input,
+.portal-main textarea {
+    background-color: #0d0d1b;
+    color: var(--texto);
+}
+
+.portal-main a {
+    color: inherit;
+}
+
+.portal-main img {
+    max-width: 100%;
+}
+
+.portal-main section[id] {
+    scroll-margin-top: 125px;
+}
 
 /* ========================================
-   14. PORTADA PRINCIPAL
+   13. PORTADA PRINCIPAL
 ======================================== */
 
 .hero-portal {
-    min-height: 430px;
+    position: relative;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
     gap: 35px;
+    min-height: 430px;
     padding: 45px;
     overflow: hidden;
-    position: relative;
     background:
         radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.2), transparent 40%),
         linear-gradient(120deg, #141428, #0d0d1b);
@@ -597,10 +625,10 @@ body[data-protected="true"] {
 }
 
 .hero-portal h2 {
+    margin-bottom: 20px;
     color: white;
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1.05;
-    margin-bottom: 20px;
     text-transform: uppercase;
 }
 
@@ -613,18 +641,24 @@ body[data-protected="true"] {
     margin-bottom: 25px;
 }
 
-.hero-boton {
-    display: inline-block;
-    padding: 13px 22px;
+.hero-boton,
+.portal-main .boton-portal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 23px;
+    margin-top: 15px;
     background: linear-gradient(110deg, var(--violeta), #b44de5);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 8px;
     color: white;
+    font-weight: 800;
     text-decoration: none;
-    font-weight: bold;
     transition: 0.3s;
 }
 
-.hero-boton:hover {
+.hero-boton:hover,
+.portal-main .boton-portal:hover {
     background: var(--celeste);
     color: var(--fondo);
     transform: translateY(-3px);
@@ -647,18 +681,39 @@ body[data-protected="true"] {
 
 .hero-decoracion {
     position: absolute;
-    width: 260px;
-    height: 260px;
     right: -100px;
     bottom: -140px;
+    width: 260px;
+    height: 260px;
     border: 2px solid rgba(34, 211, 238, 0.2);
     border-radius: 50%;
 }
 
-
 /* ========================================
-   15. ACCESOS RÁPIDOS
+   14. TÍTULOS Y ACCESOS RÁPIDOS
 ======================================== */
+
+.portal-main .titulo-seccion {
+    margin-bottom: 25px;
+}
+
+.titulo-seccion > span,
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--celeste);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.titulo-seccion h2 {
+    margin-bottom: 12px;
+}
+
+.titulo-seccion p {
+    max-width: 650px;
+}
 
 .explorar-section > h2 {
     margin-bottom: 25px;
@@ -667,20 +722,79 @@ body[data-protected="true"] {
 .explorar-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 18px;
 }
 
 .explorar-card {
-    min-height: 125px;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    min-height: 205px;
     padding: 20px;
-    border: 1px solid var(--borde);
-    border-radius: 13px;
+    overflow: hidden;
     background: linear-gradient(145deg, #1b1935, #10101f);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    border-radius: 14px;
+    box-shadow: inset 0 0 35px rgba(8, 8, 18, 0.35);
     text-decoration: none;
     transition: 0.3s;
+}
+
+.explorar-grieta {
+    background-image:
+        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
+        url("../img/Grieta.jpg");
+}
+
+.explorar-posiciones {
+    background-image:
+        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
+        url("../img/mapas%20y%20posiciones.jpg");
+}
+
+.explorar-campeones {
+    background-image:
+        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
+        url("../img/campeones.jpg");
+}
+
+.explorar-objetivos {
+    background-image:
+        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
+        url("../img/objetivos.jpg");
+}
+
+.explorar-card span,
+.explorar-card h3,
+.explorar-card p,
+.explorar-card b {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.explorar-card span {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.explorar-card h3 {
+    margin-top: 8px;
+    font-size: 1.5rem;
+}
+
+.explorar-card p {
+    margin: 4px 0 12px;
+    font-size: 0.9rem;
+}
+
+.explorar-card b {
+    color: var(--celeste);
+    font-size: 0.78rem;
+    letter-spacing: 1px;
 }
 
 .explorar-card:hover {
@@ -689,21 +803,8 @@ body[data-protected="true"] {
     box-shadow: 0 0 20px rgba(34, 211, 238, 0.12);
 }
 
-.explorar-card span {
-    color: var(--celeste);
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
-.explorar-card h3 {
-    color: white;
-    font-size: 1.15rem;
-    margin-top: 8px;
-}
-
-
 /* ========================================
-   16. INTRODUCCIÓN
+   15. INTRODUCCIÓN Y CARACTERÍSTICAS
 ======================================== */
 
 .introduccion-portal {
@@ -713,8 +814,12 @@ body[data-protected="true"] {
     border-radius: 18px !important;
 }
 
-.introduccion-portal h2 {
-    max-width: 650px;
+.introduccion-texto {
+    max-width: 800px;
+}
+
+.introduccion-texto h2 {
+    font-size: 2.3rem;
 }
 
 .caracteristicas-grid {
@@ -725,15 +830,24 @@ body[data-protected="true"] {
 }
 
 .caracteristica-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 180px;
     padding: 20px;
     background: rgba(8, 8, 18, 0.7);
     border: 1px solid var(--borde);
     border-radius: 12px;
 }
 
+.caracteristica-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--violeta);
+}
+
 .caracteristica-card h3 {
-    color: var(--celeste);
     margin-bottom: 8px;
+    color: var(--celeste);
 }
 
 .caracteristica-card p {
@@ -741,34 +855,57 @@ body[data-protected="true"] {
     font-size: 0.95rem;
 }
 
+.numero-card {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--rosa);
+    font-size: 1.8rem;
+    font-weight: 900;
+}
 
 /* ========================================
-   17. GRIETA DEL INVOCADOR
+   16. GRIETA DEL INVOCADOR
 ======================================== */
 
 .grieta-panel {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 30px;
     align-items: center;
+    gap: 30px;
     padding: 25px;
+    overflow: hidden;
     background: #141428;
     border: 1px solid var(--borde);
     border-radius: 18px;
 }
 
-.grieta-imagen img {
-    display: block;
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
+.grieta-imagen {
+    overflow: hidden;
     border-radius: 12px;
 }
 
+.grieta-imagen img {
+    display: block;
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    filter: brightness(0.82) saturate(0.88);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.grieta-imagen:hover img {
+    transform: scale(1.04);
+    filter: brightness(0.95) saturate(0.95);
+}
+
 .grieta-info h3 {
+    margin-bottom: 12px;
     color: var(--celeste);
     font-size: 1.5rem;
-    margin-bottom: 12px;
+}
+
+.grieta-info .etiqueta {
+    margin-bottom: 10px;
 }
 
 .dato-grieta {
@@ -784,9 +921,8 @@ body[data-protected="true"] {
     color: var(--texto);
 }
 
-
 /* ========================================
-   18. LÍNEAS DEL MAPA
+   17. LÍNEAS DEL MAPA
 ======================================== */
 
 .lineas-grid {
@@ -803,6 +939,15 @@ body[data-protected="true"] {
     border-radius: 8px;
 }
 
+.linea-card > span {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--rosa);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
 .linea-card h3 {
     color: var(--celeste);
 }
@@ -812,10 +957,48 @@ body[data-protected="true"] {
     font-size: 0.9rem;
 }
 
-
 /* ========================================
-   19. POSICIONES
+   18. POSICIONES Y MAPA TÁCTICO
 ======================================== */
+
+.posiciones-mapa {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 25px;
+    padding: 22px;
+    margin-bottom: 25px;
+    background: linear-gradient(120deg, #17152b, #10101e);
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+}
+
+.posiciones-mapa img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    object-position: center;
+    background: #10101e;
+    filter: brightness(0.9) saturate(0.95);
+}
+
+.posiciones-mapa span {
+    color: var(--celeste);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.posiciones-mapa h3 {
+    margin: 10px 0;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.posiciones-mapa p {
+    margin: 0;
+}
 
 .posiciones-grid {
     display: grid;
@@ -824,11 +1007,13 @@ body[data-protected="true"] {
 }
 
 .posicion-card {
-    min-height: 190px;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    min-height: 230px;
     padding: 18px;
+    overflow: hidden;
     background: linear-gradient(155deg, #242044, #11111f);
     border: 1px solid var(--borde);
     border-radius: 12px;
@@ -840,27 +1025,63 @@ body[data-protected="true"] {
     border-color: var(--violeta);
 }
 
-.posicion-card span {
+.posicion-numero {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: rgba(255, 255, 255, 0.12);
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+.posicion-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 15px;
+    background: rgba(139, 92, 246, 0.2);
+    border: 1px solid var(--violeta);
+    border-radius: 12px;
     color: var(--celeste);
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .posicion-card h3 {
+    margin-top: 8px;
     color: white;
     font-size: 1.2rem;
-    margin-top: 8px;
 }
 
 .posicion-card p {
-    font-size: 0.85rem;
     margin: 0;
+    font-size: 0.88rem;
 }
 
-
 /* ========================================
-   20. CLASES DE CAMPEONES
+   19. CAMPEONES
 ======================================== */
+
+.campeones-portada {
+    max-width: 850px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    background: #10101e;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+}
+
+.campeones-portada img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    object-position: center;
+    background: #10101e;
+    filter: brightness(0.9) saturate(0.95);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
 
 .campeones-grid {
     display: grid;
@@ -869,8 +1090,10 @@ body[data-protected="true"] {
 }
 
 .campeon-card {
-    min-height: 150px;
+    position: relative;
+    min-height: 185px;
     padding: 22px;
+    overflow: hidden;
     background: #141428;
     border: 1px solid var(--borde);
     border-left: 3px solid var(--rosa);
@@ -879,8 +1102,15 @@ body[data-protected="true"] {
 }
 
 .campeon-card:hover {
-    border-left-color: var(--celeste);
     transform: translateY(-4px);
+    border-left-color: var(--celeste);
+}
+
+.campeon-numero {
+    margin-bottom: 8px;
+    color: rgba(236, 72, 153, 0.25);
+    font-size: 2rem;
+    font-weight: 900;
 }
 
 .campeon-card h3 {
@@ -891,32 +1121,70 @@ body[data-protected="true"] {
     margin: 0;
 }
 
+.campeon-card > span {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--celeste);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
 
 /* ========================================
-   21. OBJETIVOS DEL JUEGO
+   20. OBJETIVOS DEL JUEGO
 ======================================== */
 
 .objetivos-panel {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
     align-items: center;
+    gap: 25px;
     padding: 25px;
+    overflow: hidden;
     background: #141428;
     border: 1px solid var(--borde);
     border-radius: 18px;
 }
 
-.objetivos-panel img {
-    width: 100%;
-    max-height: 350px;
-    object-fit: contain;
+.objetivos-imagen {
+    overflow: hidden;
     border-radius: 12px;
 }
 
+.objetivos-imagen img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(0.82) saturate(0.88);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.objetivos-imagen:hover img {
+    transform: scale(1.04);
+    filter: brightness(0.95) saturate(0.95);
+}
+
+.objetivos-contenido h2 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 2.2rem;
+    line-height: 1.15;
+}
+
 .objetivo-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
     padding: 13px 0;
     border-bottom: 1px solid var(--borde);
+}
+
+.objetivo-item > span {
+    min-width: 35px;
+    color: var(--rosa);
+    font-size: 1.1rem;
+    font-weight: 900;
 }
 
 .objetivo-item h3 {
@@ -927,9 +1195,21 @@ body[data-protected="true"] {
     margin: 0;
 }
 
+.objetivo-imagen-secundaria {
+    display: block;
+    width: 100%;
+    max-width: 165px;
+    height: 85px;
+    margin-top: 12px;
+    object-fit: cover;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    filter: brightness(0.85) saturate(0.88);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
 
 /* ========================================
-   22. MODOS DE JUEGO
+   21. MODOS DE JUEGO
 ======================================== */
 
 .modos-grid {
@@ -939,10 +1219,25 @@ body[data-protected="true"] {
 }
 
 .modo-card {
+    min-height: 180px;
     padding: 22px;
     background: linear-gradient(145deg, #1d1935, #11111f);
     border: 1px solid var(--borde);
     border-radius: 12px;
+    transition: 0.3s;
+}
+
+.modo-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--celeste);
+}
+
+.modo-card > span {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--rosa);
+    font-size: 0.8rem;
+    font-weight: 900;
 }
 
 .modo-card h3 {
@@ -953,9 +1248,8 @@ body[data-protected="true"] {
     margin: 0;
 }
 
-
 /* ========================================
-   23. CONSEJOS
+   22. CONSEJOS Y PERFIL GAMER
 ======================================== */
 
 .consejos-section {
@@ -965,12 +1259,16 @@ body[data-protected="true"] {
     border-radius: 18px !important;
 }
 
+.consejos-titulo {
+    margin-bottom: 20px;
+}
+
 .consejos-lista {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px 25px;
-    list-style: none;
     padding: 0;
+    list-style: none;
 }
 
 .consejos-lista li {
@@ -980,11 +1278,6 @@ body[data-protected="true"] {
     border-radius: 7px;
 }
 
-
-/* ========================================
-   24. PERFIL GAMER
-======================================== */
-
 .perfil-section {
     padding: 35px !important;
     background: linear-gradient(140deg, #19152d, #11111f) !important;
@@ -992,8 +1285,27 @@ body[data-protected="true"] {
     border-radius: 18px !important;
 }
 
+.perfil-intro {
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
 .perfil-form {
     max-width: 700px;
+}
+
+.campo-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo-perfil label {
+    margin: 0;
+}
+
+.campo-perfil input {
+    width: 100%;
 }
 
 .perfil-form button {
@@ -1001,9 +1313,12 @@ body[data-protected="true"] {
     min-width: 180px;
 }
 
+.perfil-form #mensajeGamer {
+    color: var(--celeste);
+}
 
 /* ========================================
-   25. PIE DE PÁGINA
+   23. PIE DE PÁGINA
 ======================================== */
 
 .portal-footer {
@@ -1014,48 +1329,95 @@ body[data-protected="true"] {
 }
 
 .portal-footer p {
-    color: var(--texto-secundario);
     margin: 5px 0;
+    color: var(--texto-secundario);
 }
 
 .portal-footer strong {
     color: var(--celeste);
 }
 
-
 /* ========================================
-   26. CORRECCIONES PARA EL PORTAL
+   24. ACCESOS DESPLEGABLES
 ======================================== */
 
-/* Evita fondos blancos en elementos del portal */
-
-.portal-main,
-.portal-main section,
-.portal-main article {
-    color: var(--texto);
+.portal-accesos {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1001;
 }
 
-.portal-main input,
-.portal-main textarea {
-    background-color: #0d0d1b;
-    color: var(--texto);
+.portal-accesos summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--violeta);
+    border: 1px solid var(--celeste);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    transition: 0.3s;
 }
 
-.portal-main a {
-    color: inherit;
+.portal-accesos summary::-webkit-details-marker {
+    display: none;
 }
 
-.portal-main img {
-    max-width: 100%;
+.portal-accesos summary:hover {
+    background: var(--celeste);
+    color: var(--fondo);
 }
 
+.portal-accesos summary span {
+    display: block;
+    transition: transform 0.3s;
+}
+
+.portal-accesos[open] summary span {
+    transform: rotate(180deg);
+}
+
+.portal-accesos-menu {
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 140px;
+}
+
+.portal-accesos-menu a {
+    display: block;
+    padding: 10px;
+    background: rgba(20, 20, 40, 0.95);
+    border: 1px solid var(--violeta);
+    border-radius: 8px;
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.portal-accesos-menu a:hover {
+    background: var(--violeta);
+    color: white;
+    transform: translateX(-4px);
+}
 
 /* ========================================
-   27. DISEÑO RESPONSIVE
+   25. DISEÑO RESPONSIVE
 ======================================== */
 
 @media (max-width: 1000px) {
-
     .hero-portal {
         grid-template-columns: 1fr 0.8fr;
         padding: 30px;
@@ -1075,7 +1437,6 @@ body[data-protected="true"] {
 }
 
 @media (max-width: 700px) {
-
     .portal-header {
         flex-direction: column;
         text-align: center;
@@ -1095,7 +1456,8 @@ body[data-protected="true"] {
     }
 
     .grieta-panel,
-    .objetivos-panel {
+    .objetivos-panel,
+    .posiciones-mapa {
         grid-template-columns: 1fr;
     }
 
@@ -1108,10 +1470,29 @@ body[data-protected="true"] {
     .portal-main section {
         padding: 25px 0;
     }
+
+    .posiciones-mapa img {
+        height: 190px;
+    }
+
+    .objetivos-imagen img {
+        height: 250px;
+    }
+
+    .objetivos-contenido h2 {
+        font-size: 1.8rem;
+    }
+
+    .grieta-imagen img {
+        height: 230px;
+    }
+
+    .campeones-portada img {
+        height: 180px;
+    }
 }
 
 @media (max-width: 600px) {
-
     header h1 {
         font-size: 2rem;
     }
@@ -1149,15 +1530,11 @@ body[data-protected="true"] {
 }
 
 @media (max-width: 450px) {
-
     .explorar-grid,
     .caracteristicas-grid,
     .campeones-grid,
     .modos-grid,
-    .posiciones-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .posiciones-grid,
     .lineas-grid {
         grid-template-columns: 1fr;
     }
@@ -1170,450 +1547,6 @@ body[data-protected="true"] {
         flex-direction: column;
         gap: 3px;
     }
-}
-
-/* ========================================
-   28. AJUSTES DE LA ESTRUCTURA ACTUAL
-======================================== */
-
-/* Títulos de secciones */
-
-.portal-main .titulo-seccion {
-    margin-bottom: 25px;
-}
-
-.titulo-seccion > span,
-.etiqueta {
-    display: inline-block;
-    color: var(--celeste);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-}
-
-.titulo-seccion h2 {
-    margin-bottom: 12px;
-}
-
-.titulo-seccion p {
-    max-width: 650px;
-}
-
-
-/* Botón principal */
-
-.portal-main .boton-portal {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 23px;
-    margin-top: 15px;
-    background: linear-gradient(110deg, var(--violeta), #b44de5);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 8px;
-    color: white;
-    font-weight: 800;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.portal-main .boton-portal:hover {
-    background: var(--celeste);
-    color: var(--fondo);
-    transform: translateY(-3px);
-}
-
-
-
-/* ========================================
-   29. TARJETAS DE EXPLORACIÓN
-======================================== */
-
-.portal-main .explorar-grid {
-    gap: 18px;
-}
-
-.portal-main .explorar-card {
-    position: relative;
-    min-height: 205px;
-    justify-content: flex-end;
-    overflow: hidden;
-    padding: 20px;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid rgba(139, 92, 246, 0.35);
-    border-radius: 14px;
-    box-shadow: inset 0 0 35px rgba(8, 8, 18, 0.35);
-    transition: 0.3s;
-}
-
-/* Imágenes de fondo con menor intensidad */
-
-.explorar-grieta {
-    background-image:
-        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
-        url("../img/Grieta.jpg");
-}
-
-.explorar-posiciones {
-    background-image:
-        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
-        url("../img/mapas%20y%20posiciones.jpg");
-}
-
-.explorar-campeones {
-    background-image:
-        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
-        url("../img/campeones.jpg");
-}
-
-.explorar-objetivos {
-    background-image:
-        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
-        url("../img/objetivos.jpg");
-}
-
-.explorar-card span,
-.explorar-card h3,
-.explorar-card p,
-.explorar-card b {
-    position: relative;
-    z-index: 1;
-    color: white;
-}
-
-.explorar-card h3 {
-    font-size: 1.5rem;
-}
-
-.explorar-card p {
-    font-size: 0.9rem;
-    margin: 4px 0 12px;
-}
-
-.explorar-card b {
-    color: var(--celeste);
-    font-size: 0.78rem;
-    letter-spacing: 1px;
-}
-
-.explorar-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--celeste);
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.12);
-}
-
-/* ========================================
-   30. INTRODUCCIÓN Y CARACTERÍSTICAS
-======================================== */
-
-.introduccion-texto {
-    max-width: 800px;
-}
-
-.introduccion-texto h2 {
-    font-size: 2.3rem;
-}
-
-.numero-card {
-    display: block;
-    color: var(--rosa);
-    font-size: 1.8rem;
-    font-weight: 900;
-    margin-bottom: 12px;
-}
-
-.caracteristica-card {
-    min-height: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.caracteristica-card:hover {
-    border-color: var(--violeta);
-    transform: translateY(-4px);
-}
-
-
-/* ========================================
-   31. GRIETA DEL INVOCADOR
-======================================== */
-
-.grieta-section .grieta-panel {
-    overflow: hidden;
-}
-
-.grieta-imagen img {
-    transition: transform .5s ease;
-}
-
-.grieta-imagen {
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.grieta-imagen:hover img {
-    transform: scale(1.04);
-}
-
-.grieta-info .etiqueta {
-    margin-bottom: 10px;
-}
-
-.linea-card > span {
-    display: inline-block;
-    color: var(--rosa);
-    font-size: .8rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-}
-
-
-/* ========================================
-   32. MAPA Y POSICIONES
-======================================== */
-
-.posiciones-mapa {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    align-items: center;
-    gap: 25px;
-    padding: 22px;
-    margin-bottom: 25px;
-    background: linear-gradient(120deg, #17152b, #10101e);
-    border: 1px solid var(--borde);
-    border-radius: 16px;
-}
-
-.posiciones-mapa img {
-    display: block;
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.posiciones-mapa span {
-    color: var(--celeste);
-    font-size: .78rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.posiciones-mapa h3 {
-    color: white;
-    font-size: 1.6rem;
-    margin: 10px 0;
-}
-
-.posiciones-mapa p {
-    margin: 0;
-}
-
-.posicion-card {
-    position: relative;
-    overflow: hidden;
-    min-height: 230px;
-}
-
-.posicion-numero {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: rgba(255,255,255,.12);
-    font-size: 2.8rem;
-    font-weight: 900;
-}
-
-.posicion-icono {
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-    background: rgba(139,92,246,.2);
-    border: 1px solid var(--violeta);
-    border-radius: 12px;
-    color: var(--celeste);
-    font-weight: 900;
-}
-
-.posicion-card p {
-    font-size: .88rem;
-}
-
-
-/* ========================================
-   33. CAMPEONES
-======================================== */
-
-.campeones-section .campeon-card {
-    position: relative;
-    min-height: 185px;
-    overflow: hidden;
-}
-
-.campeon-numero {
-    color: rgba(236,72,153,.25);
-    font-size: 2rem;
-    font-weight: 900;
-    margin-bottom: 8px;
-}
-
-.campeon-card > span {
-    display: inline-block;
-    margin-top: 12px;
-    color: var(--celeste);
-    font-size: .7rem;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-}
-
-
-/* ========================================
-   34. OBJETIVOS
-======================================== */
-
-.objetivos-section .objetivos-panel {
-    overflow: hidden;
-}
-
-.objetivos-imagen {
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.objetivos-imagen img {
-    display: block;
-    width: 100%;
-    height: 390px;
-    object-fit: cover;
-    transition: transform .5s ease;
-}
-
-.objetivos-imagen:hover img {
-    transform: scale(1.04);
-}
-
-.objetivos-contenido h2 {
-    color: white;
-    font-size: 2.2rem;
-    line-height: 1.15;
-    margin-bottom: 15px;
-}
-
-.objetivo-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-}
-
-.objetivo-item > span {
-    min-width: 35px;
-    color: var(--rosa);
-    font-size: 1.1rem;
-    font-weight: 900;
-}
-
-.objetivo-item h3 {
-    color: var(--celeste);
-}
-
-.objetivo-imagen-secundaria {
-    display: block;
-    width: 100%;
-    max-width: 210px;
-    height: 105px;
-    margin-top: 12px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid var(--borde);
-}
-
-
-/* ========================================
-   35. MODOS DE JUEGO
-======================================== */
-
-.modos-section .modo-card {
-    min-height: 180px;
-    transition: .3s;
-}
-
-.modo-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--celeste);
-}
-
-.modo-card > span {
-    display: block;
-    color: var(--rosa);
-    font-size: .8rem;
-    font-weight: 900;
-    margin-bottom: 12px;
-}
-
-
-/* ========================================
-   36. CONSEJOS Y PERFIL
-======================================== */
-
-.consejos-titulo {
-    margin-bottom: 20px;
-}
-
-.perfil-intro {
-    max-width: 700px;
-    margin-bottom: 25px;
-}
-
-.campo-perfil {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-.campo-perfil label {
-    margin: 0;
-}
-
-.campo-perfil input {
-    width: 100%;
-}
-
-.perfil-form #mensajeGamer {
-    color: var(--celeste);
-}
-
-
-/* ========================================
-   37. RESPONSIVE ADICIONAL
-======================================== */
-
-@media (max-width: 700px) {
-
-    .posiciones-mapa {
-        grid-template-columns: 1fr;
-    }
-
-    .posiciones-mapa img {
-        height: 220px;
-    }
-
-    .objetivos-imagen img {
-        height: 270px;
-    }
-
-    .objetivos-contenido h2 {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 450px) {
 
     .portal-main .explorar-card {
         min-height: 180px;
@@ -1625,89 +1558,5 @@ body[data-protected="true"] {
 
     .posiciones-mapa {
         padding: 14px;
-    }
-}
-
-/* ========================================
-   38. AJUSTE DE TAMAÑO E INTENSIDAD
-======================================== */
-
-/* Grieta */
-
-.grieta-imagen img {
-    height: 270px;
-    filter: brightness(0.82) saturate(0.88);
-}
-
-/* Mapa de posiciones */
-
-.posiciones-mapa img {
-    height: 210px;
-    filter: brightness(0.82) saturate(0.88);
-}
-
-/* Portada de campeones */
-
-.campeones-portada {
-    overflow: hidden;
-    max-width: 850px;
-    margin: 0 auto 25px;
-    border: 1px solid var(--borde);
-    border-radius: 14px;
-}
-
-.campeones-portada img {
-    display: block;
-    width: 100%;
-    max-height: 230px;
-    object-fit: cover;
-    filter: brightness(0.82) saturate(0.88);
-}
-
-/* Objetivos */
-
-.objetivos-imagen img {
-    height: 300px;
-    filter: brightness(0.82) saturate(0.88);
-}
-
-/* Imágenes secundarias */
-
-.objetivo-imagen-secundaria {
-    max-width: 165px;
-    height: 85px;
-    filter: brightness(0.85) saturate(0.88);
-}
-
-/* Transiciones */
-
-.grieta-imagen img,
-.posiciones-mapa img,
-.campeones-portada img,
-.objetivos-imagen img,
-.objetivo-imagen-secundaria {
-    transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.grieta-imagen:hover img,
-.objetivos-imagen:hover img {
-    filter: brightness(0.95) saturate(0.95);
-}
-
-@media (max-width: 700px) {
-    .grieta-imagen img {
-        height: 230px;
-    }
-
-    .posiciones-mapa img {
-        height: 190px;
-    }
-
-    .objetivos-imagen img {
-        height: 250px;
-    }
-
-    .campeones-portada img {
-        max-height: 180px;
     }
 }
