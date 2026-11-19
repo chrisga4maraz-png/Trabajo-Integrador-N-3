@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora | Gaming o Nada</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-protected="true">
+
+    <header>
+        <h1>Gaming o Nada</h1>
+        <p>Calculadora Gamer</p>
+
+        <nav>
+            <details>
+                <summary>Menú de navegación</summary>
+                <ul>
+                    <li><a href="gaming.html">Inicio</a></li>
+                    <li><a href="calculadora.html">Calculadora</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Calculadora Gamer</h2>
+
+            <p>
+                Ingresá dos números y seleccioná la operación matemática
+                que quieras realizar.
+            </p>
+
+            <form id="formCalculadora">
+
+                <label for="numero1">Primer número:</label>
+                <input
+                    type="number"
+                    id="numero1"
+                    name="numero1"
+                    step="any"
+                    required
+                >
+
+                <label for="numero2">Segundo número:</label>
+                <input
+                    type="number"
+                    id="numero2"
+                    name="numero2"
+                    step="any"
+                    required
+                >
+
+                <div class="operaciones">
+                    <button type="button" data-operacion="+">
+                        Sumar (+)
+                    </button>
+
+                    <button type="button" data-operacion="-">
+                        Restar (-)
+                    </button>
+
+                    <button type="button" data-operacion="*">
+                        Multiplicar (×)
+                    </button>
+
+                    <button type="button" data-operacion="/">
+                        Dividir (÷)
+                    </button>
+                </div>
+
+                <label for="resultado">Resultado:</label>
+                <input
+                    type="text"
+                    id="resultado"
+                    name="resultado"
+                    readonly
+                >
+
+                <p id="mensaje" role="status"></p>
+
+            </form>
+
+            <a href="gaming.html">Volver al inicio</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>EDI II - Tecnicatura Superior en Análisis de Sistemas - 2026</p>
+        <p>Gaming o Nada | Proyecto educativo</p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+
+</body>
+</html>

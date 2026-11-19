@@ -1,0 +1,518 @@
+
+/* ========================================
+   GAMING O NADA
+   Hoja de estilos principal
+======================================== */
+
+
+/* ========================================
+   1. CONFIGURACIÓN GENERAL
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fondo: #080812;
+    --fondo-secundario: #141428;
+    --violeta: #8b5cf6;
+    --celeste: #22d3ee;
+    --rosa: #ec4899;
+    --texto: #f4f4f8;
+    --texto-secundario: #b8b8c9;
+    --borde: #343450;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, var(--fondo), #17102b);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   2. ENCABEZADO
+======================================== */
+
+header {
+    background: linear-gradient(120deg, #17102b, #241044);
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--violeta);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+}
+
+header h1 {
+    color: var(--celeste);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px rgba(34, 211, 238, 0.35);
+}
+
+header p {
+    color: var(--texto-secundario);
+    margin-top: 5px;
+}
+
+
+/* ========================================
+   3. MENÚ DE NAVEGACIÓN
+======================================== */
+
+nav {
+    margin-top: 20px;
+}
+
+nav details {
+    position: relative;
+    display: inline-block;
+}
+
+nav summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    background: var(--violeta);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav summary::-webkit-details-marker {
+    display: none;
+}
+
+nav summary::after {
+    content: " ▼";
+    font-size: 0.75rem;
+}
+
+nav summary:hover {
+    background: var(--celeste);
+    color: var(--fondo);
+}
+
+nav details ul {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 190px;
+    list-style: none;
+    background: var(--fondo-secundario);
+    border: 1px solid var(--violeta);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+nav details li a {
+    display: block;
+    padding: 12px 15px;
+    color: var(--texto);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav details li a:hover {
+    background: var(--violeta);
+    color: white;
+}
+
+
+/* ========================================
+   4. CONTENIDO PRINCIPAL
+======================================== */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+section {
+    background: var(--fondo-secundario);
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+section h2 {
+    color: var(--celeste);
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+    border-bottom: 2px solid var(--violeta);
+    padding-bottom: 10px;
+}
+
+section h3 {
+    color: var(--rosa);
+    margin-bottom: 8px;
+}
+
+section p {
+    color: var(--texto-secundario);
+    margin-bottom: 15px;
+}
+
+section ul {
+    padding-left: 25px;
+    color: var(--texto-secundario);
+}
+
+section li {
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   5. FORMULARIO DE ACCESO
+======================================== */
+
+.login-main {
+    max-width: 550px;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-section {
+    width: 100%;
+    border-top: 3px solid var(--violeta);
+}
+
+.login-section h2 {
+    text-align: center;
+}
+
+.login-section > p {
+    text-align: center;
+}
+
+
+/* ========================================
+   6. IMAGEN PRINCIPAL
+======================================== */
+
+.logo-lol {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   7. TARJETAS Y CONTENIDO
+======================================== */
+
+article {
+    background: #1c1c35;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 4px solid var(--violeta);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: translateY(-3px);
+    border-left-color: var(--celeste);
+}
+
+blockquote {
+    margin-top: 20px;
+    padding: 18px;
+    background: rgba(139, 92, 246, 0.12);
+    border-left: 4px solid var(--celeste);
+    border-radius: 6px;
+    color: var(--texto);
+    font-style: italic;
+}
+
+
+/* ========================================
+   8. FORMULARIOS E INPUTS
+======================================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 650px;
+}
+
+label {
+    color: var(--texto);
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: #0d0d1b;
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--celeste);
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #77778c;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ========================================
+   9. BOTONES
+======================================== */
+
+button {
+    padding: 12px 18px;
+    margin-top: 10px;
+    background: var(--violeta);
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--celeste);
+    color: var(--fondo);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* ========================================
+   10. CALCULADORA
+======================================== */
+
+.operaciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.operaciones button {
+    margin-top: 0;
+}
+
+
+/* ========================================
+   11. VENTANA EMERGENTE DE CONFIRMACIÓN
+======================================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(5px);
+
+    animation: aparecerFondo 0.25s ease;
+}
+
+.modal-overlay[hidden] {
+    display: none;
+}
+
+.modal-contenido {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 35px 30px;
+    text-align: center;
+
+    background: linear-gradient(145deg, #17102b, #141428);
+    border: 1px solid var(--violeta);
+    border-radius: 18px;
+
+    box-shadow: 0 0 35px rgba(139, 92, 246, 0.25);
+
+    animation: aparecerVentana 0.3s ease;
+}
+
+.modal-icono {
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border: 3px solid #4ade80;
+    border-radius: 50%;
+
+    color: #4ade80;
+    font-size: 2.8rem;
+    font-weight: bold;
+
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.2);
+}
+
+.modal-contenido h2 {
+    color: var(--celeste);
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+}
+
+.modal-contenido p {
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
+}
+
+.modal-contenido button {
+    width: 100%;
+    max-width: 180px;
+    margin-top: 5px;
+}
+
+
+/* ANIMACIONES DE LA VENTANA */
+
+@keyframes aparecerFondo {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerVentana {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ========================================
+   12. DISEÑO RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .modal-contenido {
+        padding: 28px 20px;
+    }
+
+    .modal-contenido h2 {
+        font-size: 1.45rem;
+    }
+}
+
+
+
+/* ========================================
+   13. CONTORNOS NEÓN ANIMADOS
+======================================== */
+
+header h1,
+section h2,
+section h3 {
+    color: var(--texto);
+    -webkit-text-stroke: 1px transparent;
+    paint-order: stroke fill;
+    animation: contornoNeon 4s ease-in-out infinite alternate;
+}
+
+header h1 {
+    text-shadow:
+        0 0 2px #22d3ee,
+        0 0 8px rgba(34, 211, 238, 0.35);
+}
+
+section h2,
+section h3 {
+    text-shadow:
+        0 0 2px #8b5cf6,
+        0 0 7px rgba(139, 92, 246, 0.3);
+}
+
+@keyframes contornoNeon {
+
+    0% {
+        -webkit-text-stroke: 0.4px #22d3ee;
+        text-shadow:
+            0 0 2px #22d3ee,
+            0 0 5px #22d3ee;
+    }
+
+    50% {
+        -webkit-text-stroke: 0.8px #8b5cf6;
+        text-shadow:
+            0 0 4px #8b5cf6,
+            0 0 12px #8b5cf6;
+    }
+
+    100% {
+        -webkit-text-stroke: 1px #ec4899;
+        text-shadow:
+            0 0 3px #ec4899,
+            0 0 10px #ec4899;
+    }
+}
