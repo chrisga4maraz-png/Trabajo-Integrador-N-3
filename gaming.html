@@ -1,22 +1,34 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Gaming o Nada</title>
+    <title>Gaming o Nada | Portal Gamer</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body data-protected="true">
 
-    <header>
-        <h1>Gaming o Nada</h1>
-        <p>Todo sobre League of Legends</p>
+    <!-- ENCABEZADO -->
+
+    <header class="portal-header">
+
+        <div class="marca">
+            <span class="marca-icono">G/N</span>
+
+            <div>
+                <h1>Gaming o Nada</h1>
+                <p>Tu espacio. Tu partida. Tu comunidad.</p>
+            </div>
+        </div>
 
         <nav>
             <details>
                 <summary>Menú de navegación</summary>
+
                 <ul>
                     <li><a href="gaming.html">Inicio</a></li>
                     <li><a href="calculadora.html">Calculadora</a></li>
@@ -24,394 +36,611 @@
                 </ul>
             </details>
         </nav>
+
     </header>
 
-    <main>
 
-        <!-- PRESENTACIÓN -->
+    <main class="portal-main">
 
-        <section>
-            <h2>League of Legends</h2>
+        <!-- PORTADA PRINCIPAL -->
 
-            <img
-                src="img/Logo_LOL.png"
-                alt="Logo de League of Legends"
-                class="logo-lol"
-            >
+        <section class="hero-portal">
 
-            <p>
-                League of Legends, conocido también como LoL, es un videojuego
-                multijugador de estrategia y competencia desarrollado por
-                Riot Games. Dos equipos de cinco jugadores se enfrentan con
-                el objetivo de destruir el Nexo enemigo, ubicado en la base
-                rival.
-            </p>
+            <div class="hero-contenido">
 
-            <p>
-                Cada jugador controla un campeón con habilidades particulares.
-                Para conseguir la victoria es necesario combinar estrategia,
-                coordinación, conocimiento del mapa y trabajo en equipo.
-            </p>
+                <span class="etiqueta">UNIVERSO LEAGUE OF LEGENDS</span>
+
+                <h2>LA GRIETA<br>TE ESPERA</h2>
+
+                <p>
+                    Estrategia, campeones y enfrentamientos.
+                    Descubrí el universo de League of Legends
+                    desde otra perspectiva.
+                </p>
+
+                <a href="#explorar" class="boton-portal">
+                    EXPLORAR EL JUEGO
+                </a>
+
+            </div>
+
+            <div class="hero-imagen">
+                <img
+                    src="img/Logo_LOL.png"
+                    alt="Logo de League of Legends"
+                >
+            </div>
+
+            <span class="hero-decoracion">LEAGUE OF LEGENDS</span>
+
         </section>
 
 
-        <!-- CARACTERÍSTICAS -->
+        <!-- ACCESOS DESTACADOS -->
 
-        <section>
-            <h2>Características del juego</h2>
+        <section class="explorar-section" id="explorar">
 
-            <article>
-                <h3>Estrategia</h3>
-                <p>
-                    Cada partida requiere tomar decisiones, planificar
-                    movimientos y aprovechar las oportunidades para conseguir
-                    ventajas sobre el equipo rival.
-                </p>
-            </article>
+            <div class="titulo-seccion">
+                <span>DESCUBRÍ EL JUEGO</span>
+                <h2>Explorá el universo</h2>
+            </div>
 
-            <article>
-                <h3>Competencia</h3>
-                <p>
-                    Los jugadores ponen a prueba sus habilidades frente
-                    a otros equipos, buscando mejorar su rendimiento
-                    y alcanzar nuevas posiciones en las clasificatorias.
-                </p>
-            </article>
+            <div class="explorar-grid">
 
-            <article>
-                <h3>Trabajo en equipo</h3>
-                <p>
-                    La coordinación entre los cinco integrantes es
-                    fundamental. Cada posición cumple una función
-                    importante durante el desarrollo de la partida.
-                </p>
-            </article>
+                <a href="#grieta" class="explorar-card explorar-grieta">
+                    <span>01 / MAPA</span>
+                    <h3>La Grieta</h3>
+                    <p>Conocé el campo de batalla.</p>
+                    <b>EXPLORAR ↗</b>
+                </a>
+
+                <a href="#posiciones" class="explorar-card explorar-posiciones">
+                    <span>02 / EQUIPO</span>
+                    <h3>Posiciones</h3>
+                    <p>Descubrí el rol de cada jugador.</p>
+                    <b>EXPLORAR ↗</b>
+                </a>
+
+                <a href="#campeones" class="explorar-card explorar-campeones">
+                    <span>03 / PERSONAJES</span>
+                    <h3>Campeones</h3>
+                    <p>Conocé sus estilos de combate.</p>
+                    <b>EXPLORAR ↗</b>
+                </a>
+
+                <a href="#objetivos" class="explorar-card explorar-objetivos">
+                    <span>04 / ESTRATEGIA</span>
+                    <h3>Objetivos</h3>
+                    <p>Las claves para conseguir la victoria.</p>
+                    <b>EXPLORAR ↗</b>
+                </a>
+
+            </div>
+
         </section>
 
 
-        <!-- MAPA -->
+        <!-- PRESENTACIÓN DE LEAGUE OF LEGENDS -->
 
-        <section>
-            <h2>La Grieta del Invocador</h2>
+        <section class="introduccion-portal">
 
-            <p>
-                La Grieta del Invocador es el mapa principal de League of
-                Legends. Se encuentra dividido en tres líneas y una zona
-                de jungla, donde los equipos deben competir por el control
-                del territorio.
-            </p>
+            <div class="introduccion-texto">
 
-            <article>
-                <h3>Línea superior (Top)</h3>
+                <span class="etiqueta">EL JUEGO</span>
+
+                <h2>Más que una partida.</h2>
+
                 <p>
-                    Es el camino superior del mapa. Generalmente se enfrentan
-                    campeones resistentes o luchadores capaces de combatir
-                    individualmente.
+                    League of Legends, conocido también como LoL,
+                    es un videojuego multijugador de estrategia y
+                    competencia desarrollado por Riot Games.
                 </p>
-            </article>
 
-            <article>
-                <h3>Línea central (Mid)</h3>
                 <p>
-                    Se encuentra en el centro del mapa. Es una posición
-                    estratégica que permite desplazarse rápidamente hacia
-                    otras zonas y colaborar con el equipo.
+                    Dos equipos de cinco jugadores se enfrentan
+                    con el objetivo de destruir el Nexo enemigo,
+                    ubicado en la base rival.
                 </p>
-            </article>
 
-            <article>
-                <h3>Línea inferior (Bot)</h3>
-                <p>
-                    Es una línea compartida normalmente por dos jugadores:
-                    el tirador y el soporte. Ambos deben coordinarse para
-                    controlar la zona y conseguir ventajas.
-                </p>
-            </article>
+            </div>
 
-            <article>
-                <h3>La jungla</h3>
-                <p>
-                    Es el espacio ubicado entre las líneas. Allí se encuentran
-                    monstruos neutrales y objetivos que pueden proporcionar
-                    ventajas importantes para el equipo.
-                </p>
-            </article>
+            <div class="caracteristicas-grid">
+
+                <article class="caracteristica-card">
+                    <span class="numero-card">01</span>
+                    <h3>Estrategia</h3>
+                    <p>
+                        Tomar decisiones, planificar movimientos
+                        y aprovechar cada oportunidad.
+                    </p>
+                </article>
+
+                <article class="caracteristica-card">
+                    <span class="numero-card">02</span>
+                    <h3>Competencia</h3>
+                    <p>
+                        Poner a prueba tus habilidades y
+                        mejorar tu rendimiento.
+                    </p>
+                </article>
+
+                <article class="caracteristica-card">
+                    <span class="numero-card">03</span>
+                    <h3>Equipo</h3>
+                    <p>
+                        Coordinarse con los compañeros para
+                        alcanzar la victoria.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- LA GRIETA DEL INVOCADOR -->
+
+        <section class="grieta-section" id="grieta">
+
+            <div class="titulo-seccion">
+                <span>EL CAMPO DE BATALLA</span>
+                <h2>La Grieta del Invocador</h2>
+            </div>
+
+            <div class="grieta-panel">
+
+                <div class="grieta-imagen">
+                    <img
+                        src="img/Grieta.png"
+                        alt="Mapa de la Grieta del Invocador"
+                    >
+                </div>
+
+                <div class="grieta-info">
+
+                    <span class="etiqueta">SUMMONER'S RIFT</span>
+
+                    <h3>Controlá el mapa.</h3>
+
+                    <p>
+                        La Grieta del Invocador es el mapa principal
+                        de League of Legends. Se encuentra dividido
+                        en tres líneas y una zona de jungla, donde
+                        los equipos compiten por el control del territorio.
+                    </p>
+
+                    <div class="dato-grieta">
+                        <strong>3</strong>
+                        <span>Líneas principales</span>
+                    </div>
+
+                    <div class="dato-grieta">
+                        <strong>1</strong>
+                        <span>Zona de jungla</span>
+                    </div>
+
+                    <div class="dato-grieta">
+                        <strong>5</strong>
+                        <span>Jugadores por equipo</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="lineas-grid">
+
+                <article class="linea-card">
+                    <span>TOP</span>
+                    <h3>Línea superior</h3>
+                    <p>
+                        Es el camino superior del mapa.
+                        Generalmente se enfrentan campeones
+                        resistentes o luchadores.
+                    </p>
+                </article>
+
+                <article class="linea-card">
+                    <span>MID</span>
+                    <h3>Línea central</h3>
+                    <p>
+                        Una posición estratégica que permite
+                        desplazarse rápidamente hacia otras
+                        zonas del mapa.
+                    </p>
+                </article>
+
+                <article class="linea-card">
+                    <span>BOT</span>
+                    <h3>Línea inferior</h3>
+                    <p>
+                        Es una línea compartida normalmente
+                        por el tirador y el soporte.
+                    </p>
+                </article>
+
+                <article class="linea-card">
+                    <span>JG</span>
+                    <h3>La jungla</h3>
+                    <p>
+                        Espacio entre las líneas donde se
+                        encuentran monstruos neutrales
+                        y objetivos importantes.
+                    </p>
+                </article>
+
+            </div>
+
         </section>
 
 
         <!-- POSICIONES -->
 
-        <section>
-            <h2>Las cinco posiciones</h2>
+        <section class="posiciones-section" id="posiciones">
 
-            <p>
-                Cada equipo cuenta con cinco jugadores que ocupan diferentes
-                posiciones. Sus responsabilidades cambian según las
-                necesidades de la partida.
-            </p>
-
-            <article>
-                <h3>Top</h3>
+            <div class="titulo-seccion">
+                <span>TRABAJO EN EQUIPO</span>
+                <h2>Elegí tu posición</h2>
                 <p>
-                    Se ocupa de la línea superior. Suele utilizar campeones
-                    luchadores o tanques que pueden resistir enfrentamientos.
+                    Cada jugador tiene una función dentro del equipo.
+                    La coordinación es fundamental.
                 </p>
-            </article>
+            </div>
 
-            <article>
-                <h3>Jungla</h3>
-                <p>
-                    Recorre la jungla, elimina monstruos neutrales y ayuda
-                    a sus compañeros mediante intervenciones en las líneas.
-                </p>
-            </article>
+            <div class="posiciones-grid">
 
-            <article>
-                <h3>Mid</h3>
-                <p>
-                    Controla la línea central. Suele utilizar magos o asesinos
-                    capaces de generar daño y participar en otras zonas
-                    del mapa.
-                </p>
-            </article>
+                <article class="posicion-card">
+                    <span class="posicion-numero">01</span>
+                    <div class="posicion-icono">TOP</div>
+                    <h3>Top</h3>
+                    <p>
+                        Ocupa la línea superior. Suele utilizar
+                        luchadores o tanques capaces de resistir
+                        enfrentamientos.
+                    </p>
+                </article>
 
-            <article>
-                <h3>ADC</h3>
-                <p>
-                    Es el tirador del equipo. Su función principal es causar
-                    daño constante, especialmente durante los enfrentamientos
-                    grupales.
-                </p>
-            </article>
+                <article class="posicion-card">
+                    <span class="posicion-numero">02</span>
+                    <div class="posicion-icono">JG</div>
+                    <h3>Jungla</h3>
+                    <p>
+                        Recorre la jungla, elimina monstruos
+                        neutrales y ayuda a sus compañeros.
+                    </p>
+                </article>
 
-            <article>
-                <h3>Support</h3>
-                <p>
-                    Acompaña al tirador y brinda asistencia al equipo mediante
-                    protección, control de enemigos y visión del mapa.
-                </p>
-            </article>
+                <article class="posicion-card">
+                    <span class="posicion-numero">03</span>
+                    <div class="posicion-icono">MID</div>
+                    <h3>Mid</h3>
+                    <p>
+                        Controla la línea central y puede
+                        participar en otras zonas del mapa.
+                    </p>
+                </article>
+
+                <article class="posicion-card">
+                    <span class="posicion-numero">04</span>
+                    <div class="posicion-icono">ADC</div>
+                    <h3>ADC</h3>
+                    <p>
+                        Es el tirador del equipo. Su función
+                        principal es causar daño constante.
+                    </p>
+                </article>
+
+                <article class="posicion-card">
+                    <span class="posicion-numero">05</span>
+                    <div class="posicion-icono">SUP</div>
+                    <h3>Support</h3>
+                    <p>
+                        Brinda asistencia mediante protección,
+                        control de enemigos y visión del mapa.
+                    </p>
+                </article>
+
+            </div>
+
         </section>
 
 
         <!-- CAMPEONES -->
 
-        <section>
-            <h2>Los campeones</h2>
+        <section class="campeones-section" id="campeones">
 
-            <p>
-                League of Legends cuenta con una amplia variedad de campeones.
-                Cada uno posee habilidades, características y estilos
-                de juego diferentes.
-            </p>
-
-            <article>
-                <h3>Tanques</h3>
+            <div class="titulo-seccion">
+                <span>ESTILOS DE COMBATE</span>
+                <h2>Conocé los campeones</h2>
                 <p>
-                    Son personajes resistentes que pueden recibir grandes
-                    cantidades de daño y proteger a sus compañeros.
+                    Cada campeón posee habilidades y características
+                    que definen su manera de combatir.
                 </p>
-            </article>
+            </div>
 
-            <article>
-                <h3>Magos</h3>
-                <p>
-                    Utilizan habilidades mágicas para causar daño,
-                    controlar enemigos o brindar apoyo.
-                </p>
-            </article>
+            <div class="campeones-grid">
 
-            <article>
-                <h3>Asesinos</h3>
-                <p>
-                    Se especializan en eliminar objetivos importantes
-                    rápidamente, aprovechando su movilidad y daño explosivo.
-                </p>
-            </article>
+                <article class="campeon-card">
+                    <div class="campeon-numero">01</div>
+                    <h3>Tanques</h3>
+                    <p>
+                        Personajes resistentes que pueden recibir
+                        grandes cantidades de daño y proteger
+                        a sus compañeros.
+                    </p>
+                    <span>RESISTENCIA</span>
+                </article>
 
-            <article>
-                <h3>Luchadores</h3>
-                <p>
-                    Combinan resistencia y capacidad ofensiva para
-                    enfrentarse directamente a sus adversarios.
-                </p>
-            </article>
+                <article class="campeon-card">
+                    <div class="campeon-numero">02</div>
+                    <h3>Magos</h3>
+                    <p>
+                        Utilizan habilidades mágicas para causar
+                        daño, controlar enemigos o brindar apoyo.
+                    </p>
+                    <span>MAGIA</span>
+                </article>
 
-            <article>
-                <h3>Tiradores</h3>
-                <p>
-                    Se caracterizan por realizar daño físico a distancia,
-                    principalmente mediante ataques básicos.
-                </p>
-            </article>
+                <article class="campeon-card">
+                    <div class="campeon-numero">03</div>
+                    <h3>Asesinos</h3>
+                    <p>
+                        Se especializan en eliminar objetivos
+                        rápidamente mediante movilidad y daño.
+                    </p>
+                    <span>ELIMINACIÓN</span>
+                </article>
 
-            <article>
-                <h3>Soportes</h3>
-                <p>
-                    Sus habilidades están orientadas a proteger, curar,
-                    controlar o facilitar las acciones de sus compañeros.
-                </p>
-            </article>
+                <article class="campeon-card">
+                    <div class="campeon-numero">04</div>
+                    <h3>Luchadores</h3>
+                    <p>
+                        Combinan resistencia y capacidad ofensiva
+                        para enfrentarse directamente a sus rivales.
+                    </p>
+                    <span>COMBATE</span>
+                </article>
+
+                <article class="campeon-card">
+                    <div class="campeon-numero">05</div>
+                    <h3>Tiradores</h3>
+                    <p>
+                        Se caracterizan por realizar daño físico
+                        a distancia mediante ataques básicos.
+                    </p>
+                    <span>DAÑO A DISTANCIA</span>
+                </article>
+
+                <article class="campeon-card">
+                    <div class="campeon-numero">06</div>
+                    <h3>Soportes</h3>
+                    <p>
+                        Sus habilidades permiten proteger,
+                        curar y facilitar las acciones del equipo.
+                    </p>
+                    <span>ASISTENCIA</span>
+                </article>
+
+            </div>
+
         </section>
 
 
         <!-- OBJETIVOS -->
 
-        <section>
-            <h2>Objetivos de la partida</h2>
+        <section class="objetivos-section" id="objetivos">
 
-            <p>
-                Además de enfrentarse a los campeones enemigos, los equipos
-                deben conseguir diferentes objetivos que permiten obtener
-                ventajas estratégicas.
-            </p>
+            <div class="objetivos-panel">
 
-            <article>
-                <h3>Dragones</h3>
-                <p>
-                    Son monstruos neutrales que proporcionan mejoras
-                    permanentes al equipo que consigue derrotarlos.
-                </p>
-            </article>
+                <div class="objetivos-imagen">
+                    <img
+                        src="img/objetos.png"
+                        alt="Objetivos importantes de League of Legends"
+                    >
+                </div>
 
-            <article>
-                <h3>Barón Nashor</h3>
-                <p>
-                    Es uno de los objetivos más importantes del mapa.
-                    Su eliminación proporciona una mejora que fortalece
-                    a los integrantes del equipo.
-                </p>
-            </article>
+                <div class="objetivos-contenido">
 
-            <article>
-                <h3>Torretas</h3>
-                <p>
-                    Son estructuras defensivas que protegen las líneas
-                    y las bases. Destruirlas permite avanzar hacia
-                    el territorio enemigo.
-                </p>
-            </article>
+                    <span class="etiqueta">VENTAJAS ESTRATÉGICAS</span>
 
-            <article>
-                <h3>El Nexo</h3>
-                <p>
-                    Es la estructura principal de cada base. Destruir
-                    el Nexo rival es el objetivo final para ganar
-                    una partida.
-                </p>
-            </article>
+                    <h2>Los objetivos<br>cambian la partida.</h2>
+
+                    <p>
+                        Conseguir objetivos permite obtener ventajas
+                        estratégicas y preparar el camino hacia
+                        la base enemiga.
+                    </p>
+
+                    <div class="objetivo-item">
+                        <span>01</span>
+                        <div>
+                            <h3>Dragones</h3>
+                            <p>
+                                Monstruos neutrales que proporcionan
+                                mejoras al equipo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-item">
+                        <span>02</span>
+                        <div>
+                            <h3>Barón Nashor</h3>
+                            <p>
+                                Su eliminación proporciona una mejora
+                                importante para el equipo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="objetivo-item">
+                        <span>03</span>
+                        <div>
+                            <h3>Torretas y Nexo</h3>
+                            <p>
+                                Destruir estructuras permite avanzar
+                                hacia la base rival. El Nexo es
+                                el objetivo final.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
 
         <!-- MODOS DE JUEGO -->
 
-        <section>
-            <h2>Modos de juego</h2>
+        <section class="modos-section" id="modos">
 
-            <article>
-                <h3>Partidas normales</h3>
-                <p>
-                    Permiten jugar sin competir directamente por una posición
-                    en el sistema de clasificatorias.
-                </p>
-            </article>
+            <div class="titulo-seccion">
+                <span>ENCONTRÁ TU EXPERIENCIA</span>
+                <h2>Modos de juego</h2>
+            </div>
 
-            <article>
-                <h3>Partidas clasificatorias</h3>
-                <p>
-                    Son partidas competitivas en las que los jugadores
-                    buscan mejorar su clasificación y alcanzar divisiones
-                    superiores.
-                </p>
-            </article>
+            <div class="modos-grid">
 
-            <article>
-                <h3>ARAM</h3>
-                <p>
-                    Es un modo de juego rápido en el que los diez jugadores
-                    se enfrentan en una única línea, con campeones
-                    seleccionados aleatoriamente.
-                </p>
-            </article>
+                <article class="modo-card modo-normal">
+                    <span>01 / CASUAL</span>
+                    <h3>Partidas normales</h3>
+                    <p>
+                        Jugá sin competir directamente por
+                        una posición en el sistema clasificatorio.
+                    </p>
+                </article>
+
+                <article class="modo-card modo-ranked">
+                    <span>02 / COMPETITIVO</span>
+                    <h3>Clasificatorias</h3>
+                    <p>
+                        Mejorá tu clasificación y buscá
+                        alcanzar divisiones superiores.
+                    </p>
+                </article>
+
+                <article class="modo-card modo-aram">
+                    <span>03 / ACCIÓN RÁPIDA</span>
+                    <h3>ARAM</h3>
+                    <p>
+                        Diez jugadores se enfrentan en una única
+                        línea con campeones aleatorios.
+                    </p>
+                </article>
+
+            </div>
+
         </section>
 
 
         <!-- CONSEJOS -->
 
-        <section>
-            <h2>Claves para mejorar</h2>
+        <section class="consejos-section">
 
-            <ul>
-                <li>Practicar constantemente.</li>
-                <li>Aprender de los errores.</li>
-                <li>Trabajar en equipo.</li>
-                <li>Conocer las habilidades de cada campeón.</li>
-                <li>Prestar atención al minimapa.</li>
-                <li>Controlar los objetivos importantes.</li>
-                <li>Aprender a administrar los recursos.</li>
-            </ul>
+            <div class="consejos-titulo">
+                <span>MEJORÁ TU JUEGO</span>
+                <h2>La victoria empieza antes del combate.</h2>
+            </div>
 
-            <blockquote>
-                La estrategia, la paciencia y el trabajo en equipo
-                son fundamentales para alcanzar la victoria.
-            </blockquote>
+            <div class="consejos-lista">
+
+                <div>01 <span>Practicá constantemente.</span></div>
+                <div>02 <span>Aprendé de tus errores.</span></div>
+                <div>03 <span>Prestá atención al minimapa.</span></div>
+                <div>04 <span>Controlá los objetivos.</span></div>
+                <div>05 <span>Trabajá en equipo.</span></div>
+                <div>06 <span>Conocé las habilidades de tu campeón.</span></div>
+
+            </div>
+
         </section>
 
 
-        <!-- FORMULARIO GAMER -->
+        <!-- PERFIL GAMER -->
 
-        <section>
-            <h2>Formulario Gamer</h2>
+        <section class="perfil-section">
 
-            <p>
-                Completá tus datos para conocer un poco más sobre tu
-                perfil de jugador.
-            </p>
+            <div class="perfil-intro">
 
-            <form id="formGamer">
+                <span class="etiqueta">COMUNIDAD GAMER</span>
 
-                <label for="nombre">Nombre:</label>
-                <input
-                    type="text"
-                    id="nombre"
-                    name="nombre"
-                    minlength="3"
-                    maxlength="30"
-                    required
-                >
+                <h2>¿Cuál es tu perfil de jugador?</h2>
 
-                <label for="edad">Edad:</label>
-                <input
-                    type="number"
-                    id="edad"
-                    name="edad"
-                    min="13"
-                    max="100"
-                    required
-                >
+                <p>
+                    Contanos un poco sobre vos y tu experiencia
+                    dentro del mundo de los videojuegos.
+                </p>
 
-                <label for="horas">Horas de juego por semana:</label>
-                <input
-                    type="number"
-                    id="horas"
-                    name="horas"
-                    min="0"
-                    max="168"
-                    required
-                >
+            </div>
 
-                <button type="submit">Enviar datos</button>
+            <form id="formGamer" class="perfil-form">
+
+                <div class="campo-perfil">
+                    <label for="nombre">Nombre:</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        minlength="3"
+                        maxlength="30"
+                        placeholder="Ingresá tu nombre"
+                        required
+                    >
+                </div>
+
+                <div class="campo-perfil">
+                    <label for="edad">Edad:</label>
+                    <input
+                        type="number"
+                        id="edad"
+                        name="edad"
+                        min="13"
+                        max="100"
+                        placeholder="Tu edad"
+                        required
+                    >
+                </div>
+
+                <div class="campo-perfil">
+                    <label for="horas">Horas de juego por semana:</label>
+                    <input
+                        type="number"
+                        id="horas"
+                        name="horas"
+                        min="0"
+                        max="168"
+                        placeholder="Cantidad de horas"
+                        required
+                    >
+                </div>
+
+                <button type="submit">ENVIAR PERFIL</button>
 
                 <p id="mensajeGamer" role="status"></p>
 
             </form>
+
         </section>
 
     </main>
 
-    <footer>
-        <p>Gaming o Nada | Todo sobre League of Legends</p>
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer class="portal-footer">
+
+        <h2>GAMING O NADA</h2>
+
+        <p>
+            Tu espacio. Tu partida. Tu comunidad.
+        </p>
+
+        <span>LEAGUE OF LEGENDS · GAMING O NADA</span>
+
     </footer>
+
 
     <script src="js/script.js"></script>
 

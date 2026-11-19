@@ -26,17 +26,24 @@
     --borde: #343450;
 }
 
+html {
+    min-height: 100%;
+    background-color: var(--fondo);
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     font-family: "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(135deg, var(--fondo), #17102b);
+    background: linear-gradient(135deg, #080812, #17102b);
+    background-color: var(--fondo);
     color: var(--texto);
     line-height: 1.6;
 }
 
 
 /* ========================================
-   2. ENCABEZADO
+   2. ENCABEZADO GENERAL
 ======================================== */
 
 header {
@@ -128,7 +135,7 @@ nav details li a:hover {
 
 
 /* ========================================
-   4. CONTENIDO PRINCIPAL
+   4. CONTENIDO GENERAL
 ======================================== */
 
 main {
@@ -335,22 +342,19 @@ button:active {
 
 
 /* ========================================
-   11. VENTANA EMERGENTE DE CONFIRMACIÓN
+   11. VENTANA EMERGENTE
 ======================================== */
 
 .modal-overlay {
     position: fixed;
     inset: 0;
     z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 20px;
     background: rgba(0, 0, 0, 0.78);
     backdrop-filter: blur(5px);
-
     animation: aparecerFondo 0.25s ease;
 }
 
@@ -361,36 +365,27 @@ button:active {
 .modal-contenido {
     width: 100%;
     max-width: 430px;
-
     padding: 35px 30px;
     text-align: center;
-
     background: linear-gradient(145deg, #17102b, #141428);
     border: 1px solid var(--violeta);
     border-radius: 18px;
-
     box-shadow: 0 0 35px rgba(139, 92, 246, 0.25);
-
     animation: aparecerVentana 0.3s ease;
 }
 
 .modal-icono {
     width: 75px;
     height: 75px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin: 0 auto 20px;
-
     border: 3px solid #4ade80;
     border-radius: 50%;
-
     color: #4ade80;
     font-size: 2.8rem;
     font-weight: bold;
-
     box-shadow: 0 0 20px rgba(74, 222, 128, 0.2);
 }
 
@@ -411,17 +406,9 @@ button:active {
     margin-top: 5px;
 }
 
-
-/* ANIMACIONES DE LA VENTANA */
-
 @keyframes aparecerFondo {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes aparecerVentana {
@@ -429,7 +416,6 @@ button:active {
         opacity: 0;
         transform: translateY(20px) scale(0.95);
     }
-
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -438,37 +424,7 @@ button:active {
 
 
 /* ========================================
-   12. DISEÑO RESPONSIVE
-======================================== */
-
-@media (max-width: 600px) {
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    main {
-        width: 94%;
-        margin: 25px auto;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    .modal-contenido {
-        padding: 28px 20px;
-    }
-
-    .modal-contenido h2 {
-        font-size: 1.45rem;
-    }
-}
-
-
-
-/* ========================================
-   13. CONTORNOS NEÓN ANIMADOS
+   12. CONTORNOS NEÓN ANIMADOS
 ======================================== */
 
 header h1,
@@ -494,25 +450,724 @@ section h3 {
 }
 
 @keyframes contornoNeon {
-
     0% {
         -webkit-text-stroke: 0.4px #22d3ee;
-        text-shadow:
-            0 0 2px #22d3ee,
-            0 0 5px #22d3ee;
+        text-shadow: 0 0 2px #22d3ee, 0 0 5px #22d3ee;
     }
-
     50% {
         -webkit-text-stroke: 0.8px #8b5cf6;
-        text-shadow:
-            0 0 4px #8b5cf6,
-            0 0 12px #8b5cf6;
+        text-shadow: 0 0 4px #8b5cf6, 0 0 12px #8b5cf6;
     }
-
     100% {
         -webkit-text-stroke: 1px #ec4899;
-        text-shadow:
-            0 0 3px #ec4899,
-            0 0 10px #ec4899;
+        text-shadow: 0 0 3px #ec4899, 0 0 10px #ec4899;
+    }
+}
+
+
+/* ========================================
+   13. PORTAL GAMING O NADA
+======================================== */
+
+/* Fondo y estructura principal */
+
+body[data-protected="true"] {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.12), transparent 45%),
+        linear-gradient(135deg, #080812, #100d20 55%, #080812);
+    background-color: #080812;
+}
+
+.portal-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 22px 6%;
+    background: rgba(10, 9, 24, 0.96);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.55);
+    text-align: left;
+}
+
+.portal-header h1 {
+    font-size: 1.2rem;
+}
+
+.portal-main {
+    width: min(1200px, 92%);
+    max-width: none;
+    margin: 35px auto 70px;
+    background: transparent;
+}
+
+.portal-main section {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 35px 0;
+    margin-bottom: 25px;
+}
+
+.portal-main section h2 {
+    font-size: 2rem;
+}
+
+.portal-main p {
+    color: var(--texto-secundario);
+}
+
+.portal-header nav {
+    margin-top: 0;
+}
+
+.portal-header nav details ul {
+    right: 0;
+    left: auto;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.marca-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--violeta), var(--rosa));
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 900;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
+}
+
+.marca-texto {
+    color: var(--texto);
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.marca-texto span {
+    color: var(--celeste);
+}
+
+
+/* ========================================
+   14. PORTADA PRINCIPAL
+======================================== */
+
+.hero-portal {
+    min-height: 430px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 35px;
+    padding: 45px;
+    overflow: hidden;
+    position: relative;
+    background:
+        radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.2), transparent 40%),
+        linear-gradient(120deg, #141428, #0d0d1b);
+    border: 1px solid var(--borde);
+    border-radius: 22px;
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-etiqueta {
+    display: inline-block;
+    padding: 7px 13px;
+    margin-bottom: 18px;
+    border: 1px solid var(--celeste);
+    border-radius: 30px;
+    color: var(--celeste);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-portal h2 {
+    color: white;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-portal h2 span {
+    color: var(--celeste);
+}
+
+.hero-portal p {
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+.hero-boton {
+    display: inline-block;
+    padding: 13px 22px;
+    background: linear-gradient(110deg, var(--violeta), #b44de5);
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-boton:hover {
+    background: var(--celeste);
+    color: var(--fondo);
+    transform: translateY(-3px);
+}
+
+.hero-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.hero-imagen img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 25px rgba(139, 92, 246, 0.3));
+}
+
+.hero-decoracion {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    right: -100px;
+    bottom: -140px;
+    border: 2px solid rgba(34, 211, 238, 0.2);
+    border-radius: 50%;
+}
+
+
+/* ========================================
+   15. ACCESOS RÁPIDOS
+======================================== */
+
+.explorar-section > h2 {
+    margin-bottom: 25px;
+}
+
+.explorar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.explorar-card {
+    min-height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    border: 1px solid var(--borde);
+    border-radius: 13px;
+    background: linear-gradient(145deg, #1b1935, #10101f);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.explorar-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--celeste);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.12);
+}
+
+.explorar-card span {
+    color: var(--celeste);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.explorar-card h3 {
+    color: white;
+    font-size: 1.15rem;
+    margin-top: 8px;
+}
+
+
+/* ========================================
+   16. INTRODUCCIÓN
+======================================== */
+
+.introduccion-portal {
+    padding: 40px !important;
+    background: linear-gradient(120deg, #141428, #1b1530) !important;
+    border: 1px solid var(--borde) !important;
+    border-radius: 18px !important;
+}
+
+.introduccion-portal h2 {
+    max-width: 650px;
+}
+
+.caracteristicas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.caracteristica-card {
+    padding: 20px;
+    background: rgba(8, 8, 18, 0.7);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+}
+
+.caracteristica-card h3 {
+    color: var(--celeste);
+    margin-bottom: 8px;
+}
+
+.caracteristica-card p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+
+/* ========================================
+   17. GRIETA DEL INVOCADOR
+======================================== */
+
+.grieta-panel {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+    align-items: center;
+    padding: 25px;
+    background: #141428;
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+}
+
+.grieta-imagen img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.grieta-info h3 {
+    color: var(--celeste);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.dato-grieta {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--borde);
+    color: var(--texto-secundario);
+}
+
+.dato-grieta strong {
+    color: var(--texto);
+}
+
+
+/* ========================================
+   18. LÍNEAS DEL MAPA
+======================================== */
+
+.lineas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.linea-card {
+    padding: 18px;
+    background: #17172c;
+    border-top: 3px solid var(--violeta);
+    border-radius: 8px;
+}
+
+.linea-card h3 {
+    color: var(--celeste);
+}
+
+.linea-card p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   19. POSICIONES
+======================================== */
+
+.posiciones-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 13px;
+}
+
+.posicion-card {
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 18px;
+    background: linear-gradient(155deg, #242044, #11111f);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.posicion-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--violeta);
+}
+
+.posicion-card span {
+    color: var(--celeste);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.posicion-card h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 8px;
+}
+
+.posicion-card p {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+
+/* ========================================
+   20. CLASES DE CAMPEONES
+======================================== */
+
+.campeones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.campeon-card {
+    min-height: 150px;
+    padding: 22px;
+    background: #141428;
+    border: 1px solid var(--borde);
+    border-left: 3px solid var(--rosa);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.campeon-card:hover {
+    border-left-color: var(--celeste);
+    transform: translateY(-4px);
+}
+
+.campeon-card h3 {
+    color: var(--celeste);
+}
+
+.campeon-card p {
+    margin: 0;
+}
+
+
+/* ========================================
+   21. OBJETIVOS DEL JUEGO
+======================================== */
+
+.objetivos-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+    padding: 25px;
+    background: #141428;
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+}
+
+.objetivos-panel img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.objetivo-item {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--borde);
+}
+
+.objetivo-item h3 {
+    color: var(--celeste);
+}
+
+.objetivo-item p {
+    margin: 0;
+}
+
+
+/* ========================================
+   22. MODOS DE JUEGO
+======================================== */
+
+.modos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.modo-card {
+    padding: 22px;
+    background: linear-gradient(145deg, #1d1935, #11111f);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+}
+
+.modo-card h3 {
+    color: var(--rosa);
+}
+
+.modo-card p {
+    margin: 0;
+}
+
+
+/* ========================================
+   23. CONSEJOS
+======================================== */
+
+.consejos-section {
+    padding: 30px !important;
+    background: linear-gradient(120deg, #141428, #1b1530) !important;
+    border: 1px solid var(--borde) !important;
+    border-radius: 18px !important;
+}
+
+.consejos-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 25px;
+    list-style: none;
+    padding: 0;
+}
+
+.consejos-lista li {
+    padding: 15px;
+    background: rgba(8, 8, 18, 0.65);
+    border-left: 3px solid var(--celeste);
+    border-radius: 7px;
+}
+
+
+/* ========================================
+   24. PERFIL GAMER
+======================================== */
+
+.perfil-section {
+    padding: 35px !important;
+    background: linear-gradient(140deg, #19152d, #11111f) !important;
+    border: 1px solid var(--violeta) !important;
+    border-radius: 18px !important;
+}
+
+.perfil-form {
+    max-width: 700px;
+}
+
+.perfil-form button {
+    align-self: flex-start;
+    min-width: 180px;
+}
+
+
+/* ========================================
+   25. PIE DE PÁGINA
+======================================== */
+
+.portal-footer {
+    padding: 35px 20px;
+    background: #0b0a16;
+    border-top: 1px solid var(--violeta);
+    text-align: center;
+}
+
+.portal-footer p {
+    color: var(--texto-secundario);
+    margin: 5px 0;
+}
+
+.portal-footer strong {
+    color: var(--celeste);
+}
+
+
+/* ========================================
+   26. CORRECCIONES PARA EL PORTAL
+======================================== */
+
+/* Evita fondos blancos en elementos del portal */
+
+.portal-main,
+.portal-main section,
+.portal-main article {
+    color: var(--texto);
+}
+
+.portal-main input,
+.portal-main textarea {
+    background-color: #0d0d1b;
+    color: var(--texto);
+}
+
+.portal-main a {
+    color: inherit;
+}
+
+.portal-main img {
+    max-width: 100%;
+}
+
+
+/* ========================================
+   27. DISEÑO RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .hero-portal {
+        grid-template-columns: 1fr 0.8fr;
+        padding: 30px;
+    }
+
+    .explorar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .posiciones-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lineas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .portal-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portal-header nav {
+        margin-top: 10px;
+    }
+
+    .hero-portal {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .hero-imagen img {
+        max-width: 300px;
+    }
+
+    .grieta-panel,
+    .objetivos-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .caracteristicas-grid,
+    .campeones-grid,
+    .modos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portal-main section {
+        padding: 25px 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .modal-contenido {
+        padding: 28px 20px;
+    }
+
+    .modal-contenido h2 {
+        font-size: 1.45rem;
+    }
+
+    .posiciones-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .consejos-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .introduccion-portal,
+    .perfil-section,
+    .consejos-section {
+        padding: 22px !important;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .explorar-grid,
+    .caracteristicas-grid,
+    .campeones-grid,
+    .modos-grid,
+    .posiciones-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lineas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-portal h2 {
+        font-size: 2.3rem;
+    }
+
+    .dato-grieta {
+        flex-direction: column;
+        gap: 3px;
     }
 }
