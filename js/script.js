@@ -5,7 +5,7 @@
 
 
 /* ========================================
-   1. CONFIGURACIÓN DE ACCESO
+1. CONFIGURACIÓN DE ACCESO
 ======================================== */
 
 const USUARIO_VALIDO = "chrisga_maraz@gmail.com";
@@ -14,7 +14,7 @@ const CLAVE_SESION = "gamingONadaSesion";
 
 
 /* ========================================
-   2. PROTECCIÓN DE PÁGINAS INTERNAS
+2. PROTECCIÓN DE PÁGINAS INTERNAS
 ======================================== */
 
 if (document.body.dataset.protected === "true") {
@@ -29,7 +29,7 @@ if (document.body.dataset.protected === "true") {
 
 
 /* ========================================
-   3. FORMULARIO DE INICIO DE SESIÓN
+3. FORMULARIO DE INICIO DE SESIÓN
 ======================================== */
 
 const formularioLogin = document.getElementById("formLogin");
@@ -51,7 +51,7 @@ if (formularioLogin) {
             mensaje.textContent = "Acceso correcto. Bienvenido a Gaming o Nada.";
             mensaje.style.color = "#22d3ee";
 
-            window.location.href = "gaming.html";
+            window.location.href = "calculadora.html";
 
         } else {
 
@@ -63,7 +63,7 @@ if (formularioLogin) {
 
 
 /* ========================================
-   4. CALCULADORA
+4. CALCULADORA
 ======================================== */
 
 const formularioCalculadora = document.getElementById("formCalculadora");
@@ -149,7 +149,7 @@ if (formularioCalculadora) {
 
 
 /* ========================================
-   5. FORMULARIO GAMER
+5. FORMULARIO GAMER
 ======================================== */
 
 const formularioGamer = document.getElementById("formGamer");
@@ -179,7 +179,7 @@ if (formularioGamer) {
 
 
 /* ========================================
-   6. FORMULARIO DE CONTACTO
+6. FORMULARIO DE CONTACTO
 ======================================== */
 
 const formularioContacto = document.getElementById("formContacto");
@@ -266,4 +266,46 @@ if (formularioContacto && ventanaConfirmacion && botonCerrarConfirmacion) {
 
     });
 
+}
+
+
+/* ========================================
+7. APERTURA Y CIERRE DE CALCULADORA
+======================================== */
+
+const botonAbrirCalculadora = document.getElementById("abrirCalculadora");
+const botonCerrarCalculadora = document.getElementById("cerrarCalculadora");
+const ventanaCalculadora = document.getElementById("ventanaCalculadora");
+
+if (botonAbrirCalculadora && ventanaCalculadora && botonCerrarCalculadora) {
+
+    // Abrir calculadora
+    botonAbrirCalculadora.addEventListener("click", function () {
+        ventanaCalculadora.hidden = false;
+        ventanaCalculadora.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    });
+
+    // Cerrar calculadora
+    function cerrarCalculadora() {
+        ventanaCalculadora.hidden = true;
+        ventanaCalculadora.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+
+    botonCerrarCalculadora.addEventListener("click", cerrarCalculadora);
+
+    // Cerrar al pulsar fuera de la ventana
+    ventanaCalculadora.addEventListener("click", function (evento) {
+        if (evento.target === ventanaCalculadora) {
+            cerrarCalculadora();
+        }
+    });
+
+    // Cerrar con Escape
+    document.addEventListener("keydown", function (evento) {
+        if (evento.key === "Escape" && !ventanaCalculadora.hidden) {
+            cerrarCalculadora();
+        }
+    });
 }

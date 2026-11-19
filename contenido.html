@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -22,7 +21,7 @@
         </div>
 
         <nav class="portal-nav">
-            <a href="#inicio">Inicio</a>
+            <a href="index.html">Inicio</a>
             <a href="#grieta">Grieta</a>
             <a href="#posiciones">Posiciones</a>
             <a href="#campeones">Campeones</a>
@@ -32,6 +31,21 @@
             <a href="#perfil">Perfil</a>
         </nav>
     </header>
+<!-- BARRA LATERAL DESPLEGABLE CON FLECHA -->
+    <aside class="portal-sidebar" aria-label="Navegación entre páginas">
+        <details class="sidebar-panel">
+            <summary class="sidebar-toggle">
+                <span>Rutas</span>
+                <span class="sidebar-flecha" aria-hidden="true">&#9656;</span>
+            </summary>
+            <nav class="sidebar-links">
+                <a href="index.html">Inicio</a>
+                <a href="contenido.html">Portal LoL</a>
+                <a href="calculadora.html">Calculadora</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </details>
+    </aside>
 
     <main class="portal-main">
 
@@ -499,14 +513,14 @@
                 <h2>La victoria empieza antes del combate.</h2>
             </div>
 
-            <div class="consejos-lista">
-                <div>01 <span>Practicá constantemente.</span></div>
-                <div>02 <span>Aprendé de tus errores.</span></div>
-                <div>03 <span>Prestá atención al minimapa.</span></div>
-                <div>04 <span>Controlá los objetivos.</span></div>
-                <div>05 <span>Trabajá en equipo.</span></div>
-                <div>06 <span>Conocé las habilidades de tu campeón.</span></div>
-            </div>
+            <ul class="consejos-lista">
+                <li>01 <span>Practicá constantemente.</span></li>
+                <li>02 <span>Aprendé de tus errores.</span></li>
+                <li>03 <span>Prestá atención al minimapa.</span></li>
+                <li>04 <span>Controlá los objetivos.</span></li>
+                <li>05 <span>Trabajá en equipo.</span></li>
+                <li>06 <span>Conocé las habilidades de tu campeón.</span></li>
+            </ul>
         </section>
 
         <!-- PERFIL GAMER -->
@@ -556,18 +570,7 @@
         <span>LEAGUE OF LEGENDS · GAMING O NADA</span>
     </footer>
 
-    <!-- ACCESOS DESPLEGABLES -->
-    <details class="portal-accesos">
-        <summary aria-label="Abrir accesos">
-            <span aria-hidden="true">+</span>
-        </summary>
-
-        <div class="portal-accesos-menu">
-            <a href="calculadora.html">Calculadora</a>
-            <a href="contacto.html">Contacto</a>
-        </div>
-    </details>
-
+    <!-- SCRIPTS -->
     <script src="js/script.js"></script>
 
 </body>

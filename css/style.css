@@ -1,10 +1,5 @@
 /* ========================================
-   GAMING O NADA
-   Hoja de estilos principal optimizada
-======================================== */
-
-/* ========================================
-   1. CONFIGURACIÓN GENERAL
+   GAMING O NADA - ESTILOS PRINCIPALES
 ======================================== */
 
 * {
@@ -15,12 +10,12 @@
 
 :root {
     --fondo: #080812;
-    --fondo-secundario: #141428;
+    --fondo-sec: #141428;
     --violeta: #8b5cf6;
     --celeste: #22d3ee;
     --rosa: #ec4899;
     --texto: #f4f4f8;
-    --texto-secundario: #b8b8c9;
+    --texto-sec: #b8b8c9;
     --borde: #343450;
 }
 
@@ -35,13 +30,12 @@ body {
     min-height: 100vh;
     font-family: "Segoe UI", Arial, sans-serif;
     background: linear-gradient(135deg, #080812, #17102b);
-    background-color: var(--fondo);
     color: var(--texto);
     line-height: 1.6;
 }
 
 /* ========================================
-   2. ESTRUCTURA Y ELEMENTOS GENERALES
+   ESTRUCTURA Y NAVEGACIÓN GENERAL
 ======================================== */
 
 header {
@@ -53,15 +47,13 @@ header {
 }
 
 header h1 {
-    color: var(--celeste);
     font-size: 2.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow: 0 0 12px rgba(34, 211, 238, 0.35);
 }
 
 header p {
-    color: var(--texto-secundario);
+    color: var(--texto-sec);
     margin-top: 5px;
 }
 
@@ -74,7 +66,7 @@ main {
 section {
     padding: 30px;
     margin-bottom: 25px;
-    background: var(--fondo-secundario);
+    background: var(--fondo-sec);
     border: 1px solid var(--borde);
     border-radius: 14px;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
@@ -91,23 +83,22 @@ section h3 {
     margin-bottom: 8px;
 }
 
+section p,
+section ul {
+    color: var(--texto-sec);
+}
+
 section p {
     margin-bottom: 15px;
-    color: var(--texto-secundario);
 }
 
 section ul {
     padding-left: 25px;
-    color: var(--texto-secundario);
 }
 
 section li {
     margin-bottom: 8px;
 }
-
-/* ========================================
-   3. NAVEGACIÓN GENERAL
-======================================== */
 
 nav {
     margin-top: 20px;
@@ -122,7 +113,7 @@ nav summary {
     padding: 10px 25px;
     background: var(--violeta);
     border-radius: 8px;
-    color: white;
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
     list-style: none;
@@ -150,7 +141,7 @@ nav details ul {
     z-index: 10;
     width: 190px;
     overflow: hidden;
-    background: var(--fondo-secundario);
+    background: var(--fondo-sec);
     border: 1px solid var(--violeta);
     border-radius: 8px;
     list-style: none;
@@ -167,11 +158,96 @@ nav details li a {
 
 nav details li a:hover {
     background: var(--violeta);
-    color: white;
+    color: #fff;
+}
+
+/* Barra lateral superior desplegable con flecha */
+.portal-sidebar {
+    position: relative;
+    z-index: 20;
+    width: 230px;
+    margin: 112px 0 0 16px;
+}
+
+.sidebar-panel {
+    background: var(--fondo-sec);
+    border: 1px solid var(--violeta);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.sidebar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 14px;
+    background: rgba(139, 92, 246, 0.16);
+    color: var(--texto);
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    transition: background 0.25s, color 0.25s;
+}
+
+.sidebar-toggle::-webkit-details-marker,
+.sidebar-toggle::marker {
+    display: none;
+    content: "";
+}
+
+.sidebar-toggle:hover {
+    background: var(--violeta);
+    color: #fff;
+}
+
+.sidebar-flecha {
+    display: inline-block;
+    color: var(--celeste);
+    font-size: 1rem;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
+.sidebar-panel[open] .sidebar-flecha {
+    transform: rotate(90deg);
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    animation: deslizarSidebar 0.2s ease;
+}
+
+.sidebar-links a {
+    padding: 7px 10px;
+    color: var(--texto-sec);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.sidebar-links a:hover {
+    background: rgba(34, 211, 238, 0.12);
+    color: var(--celeste);
+    transform: translateX(3px);
+}
+
+@keyframes deslizarSidebar {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ========================================
-   4. FORMULARIO DE ACCESO
+   LOGIN, TARJETAS, FORMULARIOS Y BOTONES
 ======================================== */
 
 .login-main {
@@ -192,10 +268,6 @@ nav details li a:hover {
     text-align: center;
 }
 
-/* ========================================
-   5. IMÁGENES GENERALES
-======================================== */
-
 .logo-lol {
     display: block;
     width: 100%;
@@ -204,10 +276,6 @@ nav details li a:hover {
     margin: 20px auto;
     border-radius: 10px;
 }
-
-/* ========================================
-   6. TARJETAS Y CONTENIDO GENERAL
-======================================== */
 
 article {
     padding: 20px;
@@ -229,13 +297,8 @@ blockquote {
     background: rgba(139, 92, 246, 0.12);
     border-left: 4px solid var(--celeste);
     border-radius: 6px;
-    color: var(--texto);
     font-style: italic;
 }
-
-/* ========================================
-   7. FORMULARIOS E INPUTS
-======================================== */
 
 form {
     display: flex;
@@ -246,7 +309,6 @@ form {
 
 label {
     margin-top: 5px;
-    color: var(--texto);
     font-weight: 600;
 }
 
@@ -279,17 +341,13 @@ textarea {
     resize: vertical;
 }
 
-/* ========================================
-   8. BOTONES GENERALES
-======================================== */
-
 button {
     padding: 12px 18px;
     margin-top: 10px;
     background: var(--violeta);
     border: none;
     border-radius: 7px;
-    color: white;
+    color: #fff;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -306,10 +364,6 @@ button:active {
     transform: scale(0.98);
 }
 
-/* ========================================
-   9. CALCULADORA
-======================================== */
-
 .operaciones {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -322,7 +376,7 @@ button:active {
 }
 
 /* ========================================
-   10. VENTANA EMERGENTE
+   VENTANA EMERGENTE Y NEÓN
 ======================================== */
 
 .modal-overlay {
@@ -346,7 +400,7 @@ button:active {
     width: 100%;
     max-width: 430px;
     padding: 35px 30px;
-    background: linear-gradient(145deg, #17102b, #141428);
+    background: linear-gradient(145deg, #17102b, var(--fondo-sec));
     border: 1px solid var(--violeta);
     border-radius: 18px;
     box-shadow: 0 0 35px rgba(139, 92, 246, 0.25);
@@ -377,7 +431,7 @@ button:active {
 
 .modal-contenido p {
     margin-bottom: 20px;
-    color: var(--texto-secundario);
+    color: var(--texto-sec);
 }
 
 .modal-contenido button {
@@ -392,19 +446,9 @@ button:active {
 }
 
 @keyframes aparecerVentana {
-    from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+    from { opacity: 0; transform: translateY(20px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
 }
-
-/* ========================================
-   11. CONTORNOS NEÓN ANIMADOS
-======================================== */
 
 header h1,
 section h2,
@@ -415,39 +459,29 @@ section h3 {
     animation: contornoNeon 4s ease-in-out infinite alternate;
 }
 
-header h1 {
-    text-shadow: 0 0 2px #22d3ee, 0 0 8px rgba(34, 211, 238, 0.35);
-}
-
-section h2,
-section h3 {
-    text-shadow: 0 0 2px #8b5cf6, 0 0 7px rgba(139, 92, 246, 0.3);
-}
-
 @keyframes contornoNeon {
     0% {
-        -webkit-text-stroke: 0.4px #22d3ee;
-        text-shadow: 0 0 2px #22d3ee, 0 0 5px #22d3ee;
+        -webkit-text-stroke: 0.4px var(--celeste);
+        text-shadow: 0 0 2px var(--celeste), 0 0 5px var(--celeste);
     }
     50% {
-        -webkit-text-stroke: 0.8px #8b5cf6;
-        text-shadow: 0 0 4px #8b5cf6, 0 0 12px #8b5cf6;
+        -webkit-text-stroke: 0.8px var(--violeta);
+        text-shadow: 0 0 4px var(--violeta), 0 0 12px var(--violeta);
     }
     100% {
-        -webkit-text-stroke: 1px #ec4899;
-        text-shadow: 0 0 3px #ec4899, 0 0 10px #ec4899;
+        -webkit-text-stroke: 1px var(--rosa);
+        text-shadow: 0 0 3px var(--rosa), 0 0 10px var(--rosa);
     }
 }
 
 /* ========================================
-   12. PORTAL GAMING O NADA
+   PORTAL GAMING O NADA
 ======================================== */
 
 body[data-protected="true"] {
     background:
         radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.12), transparent 45%),
-        linear-gradient(135deg, #080812, #100d20 55%, #080812);
-    background-color: #080812;
+        linear-gradient(135deg, var(--fondo), #100d20 55%, var(--fondo));
 }
 
 .portal-header {
@@ -486,13 +520,11 @@ body[data-protected="true"] {
     justify-content: flex-end;
     flex-wrap: wrap;
     gap: 8px;
-    margin: 0;
 }
 
 .portal-nav a {
-    display: inline-block;
     padding: 9px 11px;
-    color: var(--texto-secundario);
+    color: var(--texto-sec);
     font-size: 0.82rem;
     font-weight: 700;
     text-decoration: none;
@@ -503,7 +535,7 @@ body[data-protected="true"] {
 
 .portal-nav a:hover {
     background: var(--violeta);
-    color: white;
+    color: #fff;
     box-shadow: 0 0 12px rgba(139, 92, 246, 0.3);
 }
 
@@ -521,29 +553,16 @@ body[data-protected="true"] {
     height: 48px;
     background: linear-gradient(135deg, var(--violeta), var(--rosa));
     border-radius: 12px;
-    color: white;
+    color: #fff;
     font-size: 1.3rem;
     font-weight: 900;
     box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
 }
 
-.marca-texto {
-    color: var(--texto);
-    font-size: 1.2rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.marca-texto span {
-    color: var(--celeste);
-}
-
 .portal-main {
     width: min(1200px, 92%);
-    max-width: none;
-    margin: 35px auto 70px;
-    padding-top: 105px;
-    background: transparent;
+    margin: 24px auto 70px;
+    padding-top: 12px;
 }
 
 .portal-main section {
@@ -559,22 +578,6 @@ body[data-protected="true"] {
     font-size: 2rem;
 }
 
-.portal-main p {
-    color: var(--texto-secundario);
-}
-
-.portal-main,
-.portal-main section,
-.portal-main article {
-    color: var(--texto);
-}
-
-.portal-main input,
-.portal-main textarea {
-    background-color: #0d0d1b;
-    color: var(--texto);
-}
-
 .portal-main a {
     color: inherit;
 }
@@ -587,10 +590,7 @@ body[data-protected="true"] {
     scroll-margin-top: 125px;
 }
 
-/* ========================================
-   13. PORTADA PRINCIPAL
-======================================== */
-
+/* Portada */
 .hero-portal {
     position: relative;
     display: grid;
@@ -602,7 +602,7 @@ body[data-protected="true"] {
     overflow: hidden;
     background:
         radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.2), transparent 40%),
-        linear-gradient(120deg, #141428, #0d0d1b);
+        linear-gradient(120deg, var(--fondo-sec), #0d0d1b);
     border: 1px solid var(--borde);
     border-radius: 22px;
 }
@@ -612,28 +612,12 @@ body[data-protected="true"] {
     z-index: 2;
 }
 
-.hero-etiqueta {
-    display: inline-block;
-    padding: 7px 13px;
-    margin-bottom: 18px;
-    border: 1px solid var(--celeste);
-    border-radius: 30px;
-    color: var(--celeste);
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
 .hero-portal h2 {
     margin-bottom: 20px;
-    color: white;
+    color: #fff;
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1.05;
     text-transform: uppercase;
-}
-
-.hero-portal h2 span {
-    color: var(--celeste);
 }
 
 .hero-portal p {
@@ -641,7 +625,6 @@ body[data-protected="true"] {
     margin-bottom: 25px;
 }
 
-.hero-boton,
 .portal-main .boton-portal {
     display: inline-flex;
     align-items: center;
@@ -651,13 +634,12 @@ body[data-protected="true"] {
     background: linear-gradient(110deg, var(--violeta), #b44de5);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 8px;
-    color: white;
+    color: #fff;
     font-weight: 800;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.hero-boton:hover,
 .portal-main .boton-portal:hover {
     background: var(--celeste);
     color: var(--fondo);
@@ -689,10 +671,7 @@ body[data-protected="true"] {
     border-radius: 50%;
 }
 
-/* ========================================
-   14. TÍTULOS Y ACCESOS RÁPIDOS
-======================================== */
-
+/* Títulos y accesos rápidos */
 .portal-main .titulo-seccion {
     margin-bottom: 25px;
 }
@@ -713,10 +692,6 @@ body[data-protected="true"] {
 
 .titulo-seccion p {
     max-width: 650px;
-}
-
-.explorar-section > h2 {
-    margin-bottom: 25px;
 }
 
 .explorar-grid {
@@ -744,27 +719,19 @@ body[data-protected="true"] {
 }
 
 .explorar-grieta {
-    background-image:
-        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
-        url("../img/Grieta.jpg");
+    background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/Grieta.jpg");
 }
 
 .explorar-posiciones {
-    background-image:
-        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
-        url("../img/mapas%20y%20posiciones.jpg");
+    background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/mapas%20y%20posiciones.jpg");
 }
 
 .explorar-campeones {
-    background-image:
-        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
-        url("../img/campeones.jpg");
+    background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/campeones.jpg");
 }
 
 .explorar-objetivos {
-    background-image:
-        linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)),
-        url("../img/objetivos.jpg");
+    background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/objetivos.jpg");
 }
 
 .explorar-card span,
@@ -773,7 +740,7 @@ body[data-protected="true"] {
 .explorar-card b {
     position: relative;
     z-index: 1;
-    color: white;
+    color: #fff;
 }
 
 .explorar-card span {
@@ -803,15 +770,12 @@ body[data-protected="true"] {
     box-shadow: 0 0 20px rgba(34, 211, 238, 0.12);
 }
 
-/* ========================================
-   15. INTRODUCCIÓN Y CARACTERÍSTICAS
-======================================== */
-
-.introduccion-portal {
-    padding: 40px !important;
-    background: linear-gradient(120deg, #141428, #1b1530) !important;
-    border: 1px solid var(--borde) !important;
-    border-radius: 18px !important;
+/* Introducción, Grieta, Posiciones, Campeones, Objetivos, Modos */
+.portal-main .introduccion-portal {
+    padding: 40px;
+    background: linear-gradient(120deg, var(--fondo-sec), #1b1530);
+    border: 1px solid var(--borde);
+    border-radius: 18px;
 }
 
 .introduccion-texto {
@@ -838,6 +802,7 @@ body[data-protected="true"] {
     background: rgba(8, 8, 18, 0.7);
     border: 1px solid var(--borde);
     border-radius: 12px;
+    transition: 0.3s;
 }
 
 .caracteristica-card:hover {
@@ -863,10 +828,6 @@ body[data-protected="true"] {
     font-weight: 900;
 }
 
-/* ========================================
-   16. GRIETA DEL INVOCADOR
-======================================== */
-
 .grieta-panel {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -874,12 +835,13 @@ body[data-protected="true"] {
     gap: 30px;
     padding: 25px;
     overflow: hidden;
-    background: #141428;
+    background: var(--fondo-sec);
     border: 1px solid var(--borde);
     border-radius: 18px;
 }
 
-.grieta-imagen {
+.grieta-imagen,
+.objetivos-imagen {
     overflow: hidden;
     border-radius: 12px;
 }
@@ -904,26 +866,18 @@ body[data-protected="true"] {
     font-size: 1.5rem;
 }
 
-.grieta-info .etiqueta {
-    margin-bottom: 10px;
-}
-
 .dato-grieta {
     display: flex;
     justify-content: space-between;
     gap: 15px;
     padding: 12px 0;
     border-bottom: 1px solid var(--borde);
-    color: var(--texto-secundario);
+    color: var(--texto-sec);
 }
 
 .dato-grieta strong {
     color: var(--texto);
 }
-
-/* ========================================
-   17. LÍNEAS DEL MAPA
-======================================== */
 
 .lineas-grid {
     display: grid;
@@ -957,10 +911,6 @@ body[data-protected="true"] {
     font-size: 0.9rem;
 }
 
-/* ========================================
-   18. POSICIONES Y MAPA TÁCTICO
-======================================== */
-
 .posiciones-mapa {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -978,7 +928,6 @@ body[data-protected="true"] {
     width: 100%;
     height: 210px;
     object-fit: contain;
-    object-position: center;
     background: #10101e;
     filter: brightness(0.9) saturate(0.95);
 }
@@ -992,7 +941,7 @@ body[data-protected="true"] {
 
 .posiciones-mapa h3 {
     margin: 10px 0;
-    color: white;
+    color: #fff;
     font-size: 1.6rem;
 }
 
@@ -1050,7 +999,7 @@ body[data-protected="true"] {
 
 .posicion-card h3 {
     margin-top: 8px;
-    color: white;
+    color: #fff;
     font-size: 1.2rem;
 }
 
@@ -1058,10 +1007,6 @@ body[data-protected="true"] {
     margin: 0;
     font-size: 0.88rem;
 }
-
-/* ========================================
-   19. CAMPEONES
-======================================== */
 
 .campeones-portada {
     max-width: 850px;
@@ -1077,10 +1022,8 @@ body[data-protected="true"] {
     width: 100%;
     height: 230px;
     object-fit: contain;
-    object-position: center;
     background: #10101e;
     filter: brightness(0.9) saturate(0.95);
-    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .campeones-grid {
@@ -1090,11 +1033,9 @@ body[data-protected="true"] {
 }
 
 .campeon-card {
-    position: relative;
     min-height: 185px;
     padding: 22px;
-    overflow: hidden;
-    background: #141428;
+    background: var(--fondo-sec);
     border: 1px solid var(--borde);
     border-left: 3px solid var(--rosa);
     border-radius: 10px;
@@ -1130,10 +1071,6 @@ body[data-protected="true"] {
     letter-spacing: 1.5px;
 }
 
-/* ========================================
-   20. OBJETIVOS DEL JUEGO
-======================================== */
-
 .objetivos-panel {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1141,14 +1078,9 @@ body[data-protected="true"] {
     gap: 25px;
     padding: 25px;
     overflow: hidden;
-    background: #141428;
+    background: var(--fondo-sec);
     border: 1px solid var(--borde);
     border-radius: 18px;
-}
-
-.objetivos-imagen {
-    overflow: hidden;
-    border-radius: 12px;
 }
 
 .objetivos-imagen img {
@@ -1167,7 +1099,7 @@ body[data-protected="true"] {
 
 .objetivos-contenido h2 {
     margin-bottom: 15px;
-    color: white;
+    color: #fff;
     font-size: 2.2rem;
     line-height: 1.15;
 }
@@ -1205,12 +1137,7 @@ body[data-protected="true"] {
     border: 1px solid var(--borde);
     border-radius: 8px;
     filter: brightness(0.85) saturate(0.88);
-    transition: filter 0.3s ease, transform 0.3s ease;
 }
-
-/* ========================================
-   21. MODOS DE JUEGO
-======================================== */
 
 .modos-grid {
     display: grid;
@@ -1248,15 +1175,12 @@ body[data-protected="true"] {
     margin: 0;
 }
 
-/* ========================================
-   22. CONSEJOS Y PERFIL GAMER
-======================================== */
-
-.consejos-section {
-    padding: 30px !important;
-    background: linear-gradient(120deg, #141428, #1b1530) !important;
-    border: 1px solid var(--borde) !important;
-    border-radius: 18px !important;
+/* Consejos, Perfil y Pie de página */
+.portal-main .consejos-section {
+    padding: 30px;
+    background: linear-gradient(120deg, var(--fondo-sec), #1b1530);
+    border: 1px solid var(--borde);
+    border-radius: 18px;
 }
 
 .consejos-titulo {
@@ -1278,20 +1202,20 @@ body[data-protected="true"] {
     border-radius: 7px;
 }
 
-.perfil-section {
-    padding: 35px !important;
-    background: linear-gradient(140deg, #19152d, #11111f) !important;
-    border: 1px solid var(--violeta) !important;
-    border-radius: 18px !important;
+.portal-main .perfil-section {
+    padding: 35px;
+    background: linear-gradient(140deg, #19152d, #11111f);
+    border: 1px solid var(--violeta);
+    border-radius: 18px;
+}
+
+.perfil-intro,
+.perfil-form {
+    max-width: 700px;
 }
 
 .perfil-intro {
-    max-width: 700px;
     margin-bottom: 25px;
-}
-
-.perfil-form {
-    max-width: 700px;
 }
 
 .campo-perfil {
@@ -1304,10 +1228,6 @@ body[data-protected="true"] {
     margin: 0;
 }
 
-.campo-perfil input {
-    width: 100%;
-}
-
 .perfil-form button {
     align-self: flex-start;
     min-width: 180px;
@@ -1316,10 +1236,6 @@ body[data-protected="true"] {
 .perfil-form #mensajeGamer {
     color: var(--celeste);
 }
-
-/* ========================================
-   23. PIE DE PÁGINA
-======================================== */
 
 .portal-footer {
     padding: 35px 20px;
@@ -1330,85 +1246,61 @@ body[data-protected="true"] {
 
 .portal-footer p {
     margin: 5px 0;
-    color: var(--texto-secundario);
-}
-
-.portal-footer strong {
-    color: var(--celeste);
+    color: var(--texto-sec);
 }
 
 /* ========================================
-   24. ACCESOS DESPLEGABLES
+   ADAPTACIÓN A PANTALLAS CHICAS
 ======================================== */
 
-.portal-accesos {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 1001;
+@media (max-width: 900px) {
+    .hero-portal,
+    .grieta-panel,
+    .posiciones-mapa,
+    .objetivos-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .explorar-grid,
+    .lineas-grid,
+    .caracteristicas-grid,
+    .campeones-grid,
+    .modos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .posiciones-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.portal-accesos summary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    background: var(--violeta);
-    border: 1px solid var(--celeste);
-    border-radius: 50%;
-    color: white;
-    font-size: 1.6rem;
-    font-weight: bold;
-    cursor: pointer;
-    list-style: none;
-    transition: 0.3s;
-}
+@media (max-width: 600px) {
+    .portal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
 
-.portal-accesos summary::-webkit-details-marker {
-    display: none;
-}
+    .portal-nav {
+        justify-content: flex-start;
+    }
 
-.portal-accesos summary:hover {
-    background: var(--celeste);
-    color: var(--fondo);
-}
+    .portal-sidebar {
+        margin-top: 155px;
+    }
 
-.portal-accesos summary span {
-    display: block;
-    transition: transform 0.3s;
-}
+    .explorar-grid,
+    .lineas-grid,
+    .caracteristicas-grid,
+    .campeones-grid,
+    .modos-grid,
+    .posiciones-grid,
+    .consejos-lista,
+    .operaciones {
+        grid-template-columns: 1fr;
+    }
 
-.portal-accesos[open] summary span {
-    transform: rotate(180deg);
-}
-
-.portal-accesos-menu {
-    position: absolute;
-    right: 0;
-    bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 140px;
-}
-
-.portal-accesos-menu a {
-    display: block;
-    padding: 10px;
-    background: rgba(20, 20, 40, 0.95);
-    border: 1px solid var(--violeta);
-    border-radius: 8px;
-    color: var(--texto-secundario);
-    font-size: 0.85rem;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.portal-accesos-menu a:hover {
-    background: var(--violeta);
-    color: white;
-    transform: translateX(-4px);
+    .hero-portal {
+        padding: 25px;
+    }
 }
