@@ -1,9 +1,50 @@
 GAMING O NADA
+TRABAJO INTEGRADOR N.º 3
 
-Repositorio de GitHub:
+Materia: EDI I
+Tecnicatura Superior en Análisis de Sistemas
+Año: 2026
+
+DESCRIPCIÓN
+Sitio web estático con contenido sobre League of Legends.
+Incluye inicio de sesión, navegación entre páginas, calculadora,
+formularios de perfil de jugador y de contacto.
+
+REPOSITORIO
 https://github.com/chrisga4maraz-png/Trabajo-Integrador-N-3
 
-DATOS DE ACCESO AL FORMULARIO
+TECNOLOGÍAS UTILIZADAS
+- HTML5
+- CSS3
+- JavaScript
+- GitHub y GitHub Pages
 
+FUNCIONALIDADES
+- Inicio de sesión con validación.
+- Protección básica de las páginas internas mediante sessionStorage.
+- Navegación por secciones y enlaces entre páginas.
+- Calculadora con suma, resta, multiplicación y división.
+- Validación de datos en los formularios.
+- Formulario de perfil gamer.
+- Formulario de contacto con ventana de confirmación.
+- Diseño adaptable a distintos tamaños de pantalla.
+
+DATOS DE ACCESO DE PRUEBA
 Usuario: chrisga_maraz@gmail.com
 Contraseña: 987654321
+
+INSTRUCCIONES DE EJECUCIÓN
+1. Descargar o clonar el repositorio.
+2. Abrir index.html en un navegador.
+3. Utilizar los datos de acceso de prueba.
+4. Al ingresar, se abre la calculadora.
+5. Desde el menú se puede navegar por las demás secciones.
+
+ESTRUCTURA PRINCIPAL
+index.html        - Página de inicio de sesión
+calculadora.html  - Calculadora matemática
+contenido.html    - Portal informativo
+contacto.html     - Formulario de contacto
+css/style.css     - Estilos del sitio
+js/script.js      - Funcionalidad JavaScript
+img/              - Imágenes utilizadas en el proyecto
