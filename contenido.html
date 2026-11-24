@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<!-- ========================================
+     CABECERA DEL DOCUMENTO
+======================================== -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +11,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-protected="true">
+<body>
 
-    <!-- ENCABEZADO -->
+    <!-- ========================================
+         ENCABEZADO Y NAVEGACIÓN PRINCIPAL
+    ======================================== -->
     <header class="portal-header">
         <div class="marca">
-            <span class="marca-icono">G/N</span>
+            <span class="marca-icono" aria-hidden="true">G/N</span>
             <div>
-                <h1>Gaming o Nada</h1>
-                <p>Tu espacio. Tu partida. Tu comunidad.</p>
+                <p class="marca-titulo">Gaming o Nada</p>
+                <p class="marca-subtitulo">Tu espacio. Tu partida. Tu comunidad.</p>
             </div>
         </div>
 
-        <nav class="portal-nav">
+        <nav class="portal-nav" aria-label="Secciones del portal">
             <a href="#inicio">Inicio</a>
             <a href="#grieta">Grieta</a>
             <a href="#posiciones">Posiciones</a>
@@ -31,28 +36,34 @@
             <a href="#perfil">Perfil</a>
         </nav>
     </header>
-<!-- BARRA LATERAL DESPLEGABLE CON FLECHA -->
+
+    <!-- ========================================
+         MENÚ LATERAL DESPLEGABLE
+    ======================================== -->
     <aside class="portal-sidebar" aria-label="Navegación entre páginas">
         <details class="sidebar-panel">
             <summary class="sidebar-toggle">
-                <span>Rutas</span>
+                <span>Menú</span>
                 <span class="sidebar-flecha" aria-hidden="true">&#9656;</span>
             </summary>
-            <nav class="sidebar-links">
+            <nav class="sidebar-links" aria-label="Páginas del sitio">
                 <a href="#inicio">Inicio</a>
-               <a href="index.html?destino=calculadora">Calculadora</a>
+                <a href="formulario.html">Formulario</a>
                 <a href="contacto.html">Contacto</a>
             </nav>
         </details>
     </aside>
 
+    <!-- ========================================
+         CONTENIDO PRINCIPAL
+    ======================================== -->
     <main class="portal-main">
 
         <!-- PORTADA PRINCIPAL -->
         <section class="hero-portal" id="inicio">
             <div class="hero-contenido">
                 <span class="etiqueta">UNIVERSO LEAGUE OF LEGENDS</span>
-                <h2>LA GRIETA<br>TE ESPERA</h2>
+                <h1>LA GRIETA<br>TE ESPERA</h1>
                 <p>
                     Estrategia, campeones y enfrentamientos.
                     Descubrí el universo de League of Legends
@@ -65,7 +76,7 @@
                 <img src="img/Logo_LOL.png" alt="Logo de League of Legends">
             </div>
 
-            <span class="hero-decoracion">LEAGUE OF LEGENDS</span>
+            <span class="hero-decoracion" aria-hidden="true">LEAGUE OF LEGENDS</span>
         </section>
 
         <!-- ACCESOS DESTACADOS -->
@@ -80,28 +91,28 @@
                     <span>01 / MAPA</span>
                     <h3>La Grieta</h3>
                     <p>Conocé el campo de batalla.</p>
-                    <b>EXPLORAR ↗</b>
+                    <b>EXPLORAR &#8599;</b>
                 </a>
 
                 <a href="#posiciones" class="explorar-card explorar-posiciones">
                     <span>02 / EQUIPO</span>
                     <h3>Posiciones</h3>
                     <p>Descubrí el rol de cada jugador.</p>
-                    <b>EXPLORAR ↗</b>
+                    <b>EXPLORAR &#8599;</b>
                 </a>
 
                 <a href="#campeones" class="explorar-card explorar-campeones">
                     <span>03 / PERSONAJES</span>
                     <h3>Campeones</h3>
                     <p>Conocé sus estilos de combate.</p>
-                    <b>EXPLORAR ↗</b>
+                    <b>EXPLORAR &#8599;</b>
                 </a>
 
                 <a href="#objetivos" class="explorar-card explorar-objetivos">
                     <span>04 / ESTRATEGIA</span>
                     <h3>Objetivos</h3>
                     <p>Las claves para conseguir la victoria.</p>
-                    <b>EXPLORAR ↗</b>
+                    <b>EXPLORAR &#8599;</b>
                 </a>
             </div>
         </section>
@@ -245,7 +256,6 @@
                 </p>
             </div>
 
-            <!-- MAPA TÁCTICO -->
             <div class="posiciones-mapa">
                 <img src="img/mapas%20y%20posiciones.jpg"
                      alt="Mapa táctico de las posiciones en la Grieta del Invocador"
@@ -262,7 +272,6 @@
                 </div>
             </div>
 
-            <!-- FUNCIONES DE CADA POSICIÓN -->
             <div class="posiciones-grid">
                 <article class="posicion-card">
                     <span class="posicion-numero">01</span>
@@ -562,14 +571,18 @@
 
     </main>
 
-    <!-- PIE DE PÁGINA -->
+    <!-- ========================================
+         PIE DE PÁGINA
+    ======================================== -->
     <footer class="portal-footer">
         <h2>GAMING O NADA</h2>
         <p>Tu espacio. Tu partida. Tu comunidad.</p>
         <span>LEAGUE OF LEGENDS · GAMING O NADA</span>
     </footer>
 
-    <!-- SCRIPTS -->
+    <!-- ========================================
+         SCRIPTS
+    ======================================== -->
     <script src="js/script.js"></script>
 
 </body>
