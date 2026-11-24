@@ -35,7 +35,7 @@ body {
 }
 
 /* ========================================
-   ESTRUCTURA Y NAVEGACIÓN GENERAL
+   ESTRUCTURA, NAVEGACIÓN Y MENÚ LATERAL
 ======================================== */
 
 header {
@@ -79,35 +79,14 @@ section h2 {
     font-size: 1.7rem;
 }
 
-section h3 {
-    margin-bottom: 8px;
-}
+section h3 { margin-bottom: 8px; }
+section p, section ul { color: var(--texto-sec); }
+section p { margin-bottom: 15px; }
+section ul { padding-left: 25px; }
+section li { margin-bottom: 8px; }
 
-section p,
-section ul {
-    color: var(--texto-sec);
-}
-
-section p {
-    margin-bottom: 15px;
-}
-
-section ul {
-    padding-left: 25px;
-}
-
-section li {
-    margin-bottom: 8px;
-}
-
-nav {
-    margin-top: 20px;
-}
-
-nav details {
-    position: relative;
-    display: inline-block;
-}
+nav { margin-top: 20px; }
+nav details { position: relative; display: inline-block; }
 
 nav summary {
     padding: 10px 25px;
@@ -120,19 +99,9 @@ nav summary {
     transition: 0.3s;
 }
 
-nav summary::-webkit-details-marker {
-    display: none;
-}
-
-nav summary::after {
-    content: " ▼";
-    font-size: 0.75rem;
-}
-
-nav summary:hover {
-    background: var(--celeste);
-    color: var(--fondo);
-}
+nav summary::-webkit-details-marker { display: none; }
+nav summary::after { content: " ▼"; font-size: 0.75rem; }
+nav summary:hover { background: var(--celeste); color: var(--fondo); }
 
 nav details ul {
     position: absolute;
@@ -156,12 +125,8 @@ nav details li a {
     transition: 0.3s;
 }
 
-nav details li a:hover {
-    background: var(--violeta);
-    color: #fff;
-}
+nav details li a:hover { background: var(--violeta); color: #fff; }
 
-/* Barra lateral superior desplegable con flecha */
 .portal-sidebar {
     position: relative;
     z-index: 20;
@@ -191,15 +156,8 @@ nav details li a:hover {
 }
 
 .sidebar-toggle::-webkit-details-marker,
-.sidebar-toggle::marker {
-    display: none;
-    content: "";
-}
-
-.sidebar-toggle:hover {
-    background: var(--violeta);
-    color: #fff;
-}
+.sidebar-toggle::marker { display: none; content: ""; }
+.sidebar-toggle:hover { background: var(--violeta); color: #fff; }
 
 .sidebar-flecha {
     display: inline-block;
@@ -209,9 +167,7 @@ nav details li a:hover {
     transition: transform 0.25s ease;
 }
 
-.sidebar-panel[open] .sidebar-flecha {
-    transform: rotate(90deg);
-}
+.sidebar-panel[open] .sidebar-flecha { transform: rotate(90deg); }
 
 .sidebar-links {
     display: flex;
@@ -236,14 +192,8 @@ nav details li a:hover {
 }
 
 @keyframes deslizarSidebar {
-    from {
-        opacity: 0;
-        transform: translateY(-6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ========================================
@@ -258,15 +208,8 @@ nav details li a:hover {
     min-height: 55vh;
 }
 
-.login-section {
-    width: 100%;
-    border-top: 3px solid var(--violeta);
-}
-
-.login-section h2,
-.login-section > p {
-    text-align: center;
-}
+.login-section { width: 100%; border-top: 3px solid var(--violeta); }
+.login-section h2, .login-section > p { text-align: center; }
 
 .logo-lol {
     display: block;
@@ -286,10 +229,7 @@ article {
     transition: 0.3s;
 }
 
-article:hover {
-    transform: translateY(-3px);
-    border-left-color: var(--celeste);
-}
+article:hover { transform: translateY(-3px); border-left-color: var(--celeste); }
 
 blockquote {
     padding: 18px;
@@ -300,20 +240,10 @@ blockquote {
     font-style: italic;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 650px;
-}
+form { display: flex; flex-direction: column; gap: 12px; max-width: 650px; }
+label { margin-top: 5px; font-weight: 600; }
 
-label {
-    margin-top: 5px;
-    font-weight: 600;
-}
-
-input,
-textarea {
+input, textarea {
     width: 100%;
     padding: 12px 14px;
     background: #0d0d1b;
@@ -326,20 +256,13 @@ textarea {
     transition: 0.3s;
 }
 
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
     border-color: var(--celeste);
     box-shadow: 0 0 8px rgba(34, 211, 238, 0.2);
 }
 
-input::placeholder,
-textarea::placeholder {
-    color: #77778c;
-}
-
-textarea {
-    resize: vertical;
-}
+input::placeholder, textarea::placeholder { color: #77778c; }
+textarea { resize: vertical; }
 
 button {
     padding: 12px 18px;
@@ -354,26 +277,11 @@ button {
     transition: 0.3s;
 }
 
-button:hover {
-    background: var(--celeste);
-    color: var(--fondo);
-    transform: translateY(-2px);
-}
+button:hover { background: var(--celeste); color: var(--fondo); transform: translateY(-2px); }
+button:active { transform: scale(0.98); }
 
-button:active {
-    transform: scale(0.98);
-}
-
-.operaciones {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 10px 0;
-}
-
-.operaciones button {
-    margin-top: 0;
-}
+.operaciones { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 10px 0; }
+.operaciones button { margin-top: 0; }
 
 /* ========================================
    VENTANA EMERGENTE Y NEÓN
@@ -392,9 +300,7 @@ button:active {
     animation: aparecerFondo 0.25s ease;
 }
 
-.modal-overlay[hidden] {
-    display: none;
-}
+.modal-overlay[hidden] { display: none; }
 
 .modal-contenido {
     width: 100%;
@@ -423,36 +329,17 @@ button:active {
     box-shadow: 0 0 20px rgba(74, 222, 128, 0.2);
 }
 
-.modal-contenido h2 {
-    margin-bottom: 12px;
-    color: var(--celeste);
-    font-size: 1.7rem;
-}
+.modal-contenido h2 { margin-bottom: 12px; color: var(--celeste); font-size: 1.7rem; }
+.modal-contenido p { margin-bottom: 20px; color: var(--texto-sec); }
+.modal-contenido button { width: 100%; max-width: 180px; margin-top: 5px; }
 
-.modal-contenido p {
-    margin-bottom: 20px;
-    color: var(--texto-sec);
-}
-
-.modal-contenido button {
-    width: 100%;
-    max-width: 180px;
-    margin-top: 5px;
-}
-
-@keyframes aparecerFondo {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
+@keyframes aparecerFondo { from { opacity: 0; } to { opacity: 1; } }
 @keyframes aparecerVentana {
     from { opacity: 0; transform: translateY(20px) scale(0.95); }
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-header h1,
-section h2,
-section h3 {
+header h1, section h2, section h3 {
     color: var(--texto);
     -webkit-text-stroke: 1px transparent;
     paint-order: stroke fill;
@@ -460,18 +347,9 @@ section h3 {
 }
 
 @keyframes contornoNeon {
-    0% {
-        -webkit-text-stroke: 0.4px var(--celeste);
-        text-shadow: 0 0 2px var(--celeste), 0 0 5px var(--celeste);
-    }
-    50% {
-        -webkit-text-stroke: 0.8px var(--violeta);
-        text-shadow: 0 0 4px var(--violeta), 0 0 12px var(--violeta);
-    }
-    100% {
-        -webkit-text-stroke: 1px var(--rosa);
-        text-shadow: 0 0 3px var(--rosa), 0 0 10px var(--rosa);
-    }
+    0% { -webkit-text-stroke: 0.4px var(--celeste); text-shadow: 0 0 2px var(--celeste), 0 0 5px var(--celeste); }
+    50% { -webkit-text-stroke: 0.8px var(--violeta); text-shadow: 0 0 4px var(--violeta), 0 0 12px var(--violeta); }
+    100% { -webkit-text-stroke: 1px var(--rosa); text-shadow: 0 0 3px var(--rosa), 0 0 10px var(--rosa); }
 }
 
 /* ========================================
@@ -502,17 +380,9 @@ body[data-protected="true"] {
     backdrop-filter: blur(12px);
 }
 
-.portal-header h1 {
-    font-size: 1.2rem;
-}
-
-.portal-header .marca {
-    flex-shrink: 0;
-}
-
-.portal-header nav {
-    margin-top: 0;
-}
+.portal-header h1 { font-size: 1.2rem; }
+.portal-header .marca { flex-shrink: 0; }
+.portal-header nav { margin-top: 0; }
 
 .portal-nav {
     display: flex;
@@ -539,11 +409,7 @@ body[data-protected="true"] {
     box-shadow: 0 0 12px rgba(139, 92, 246, 0.3);
 }
 
-.marca {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+.marca { display: flex; align-items: center; gap: 12px; }
 
 .marca-icono {
     display: flex;
@@ -559,11 +425,7 @@ body[data-protected="true"] {
     box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
 }
 
-.portal-main {
-    width: min(1200px, 92%);
-    margin: 24px auto 70px;
-    padding-top: 12px;
-}
+.portal-main { width: min(1200px, 92%); margin: 24px auto 70px; padding-top: 12px; }
 
 .portal-main section {
     padding: 35px 0;
@@ -574,23 +436,11 @@ body[data-protected="true"] {
     box-shadow: none;
 }
 
-.portal-main section h2 {
-    font-size: 2rem;
-}
+.portal-main section h2 { font-size: 2rem; }
+.portal-main a { color: inherit; }
+.portal-main img { max-width: 100%; }
+.portal-main section[id] { scroll-margin-top: 125px; }
 
-.portal-main a {
-    color: inherit;
-}
-
-.portal-main img {
-    max-width: 100%;
-}
-
-.portal-main section[id] {
-    scroll-margin-top: 125px;
-}
-
-/* Portada */
 .hero-portal {
     position: relative;
     display: grid;
@@ -607,11 +457,7 @@ body[data-protected="true"] {
     border-radius: 22px;
 }
 
-.hero-contenido {
-    position: relative;
-    z-index: 2;
-}
-
+.hero-contenido { position: relative; z-index: 2; }
 .hero-portal h2 {
     margin-bottom: 20px;
     color: #fff;
@@ -620,10 +466,7 @@ body[data-protected="true"] {
     text-transform: uppercase;
 }
 
-.hero-portal p {
-    max-width: 500px;
-    margin-bottom: 25px;
-}
+.hero-portal p { max-width: 500px; margin-bottom: 25px; }
 
 .portal-main .boton-portal {
     display: inline-flex;
@@ -640,18 +483,8 @@ body[data-protected="true"] {
     transition: 0.3s;
 }
 
-.portal-main .boton-portal:hover {
-    background: var(--celeste);
-    color: var(--fondo);
-    transform: translateY(-3px);
-}
-
-.hero-imagen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 0;
-}
+.portal-main .boton-portal:hover { background: var(--celeste); color: var(--fondo); transform: translateY(-3px); }
+.hero-imagen { display: flex; align-items: center; justify-content: center; min-width: 0; }
 
 .hero-imagen img {
     width: 100%;
@@ -671,13 +504,8 @@ body[data-protected="true"] {
     border-radius: 50%;
 }
 
-/* Títulos y accesos rápidos */
-.portal-main .titulo-seccion {
-    margin-bottom: 25px;
-}
-
-.titulo-seccion > span,
-.etiqueta {
+.portal-main .titulo-seccion { margin-bottom: 25px; }
+.titulo-seccion > span, .etiqueta {
     display: inline-block;
     margin-bottom: 12px;
     color: var(--celeste);
@@ -686,19 +514,10 @@ body[data-protected="true"] {
     letter-spacing: 2px;
 }
 
-.titulo-seccion h2 {
-    margin-bottom: 12px;
-}
+.titulo-seccion h2 { margin-bottom: 12px; }
+.titulo-seccion p { max-width: 650px; }
 
-.titulo-seccion p {
-    max-width: 650px;
-}
-
-.explorar-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-}
+.explorar-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 
 .explorar-card {
     position: relative;
@@ -718,51 +537,16 @@ body[data-protected="true"] {
     transition: 0.3s;
 }
 
-.explorar-grieta {
-    background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/Grieta.jpg");
-}
+.explorar-grieta { background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/Grieta.jpg"); }
+.explorar-posiciones { background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/mapas%20y%20posiciones.jpg"); }
+.explorar-campeones { background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/campeones.jpg"); }
+.explorar-objetivos { background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/objetivos.jpg"); }
 
-.explorar-posiciones {
-    background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/mapas%20y%20posiciones.jpg");
-}
-
-.explorar-campeones {
-    background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/campeones.jpg");
-}
-
-.explorar-objetivos {
-    background-image: linear-gradient(rgba(8, 8, 18, 0.38), rgba(8, 8, 18, 0.68)), url("../img/objetivos.jpg");
-}
-
-.explorar-card span,
-.explorar-card h3,
-.explorar-card p,
-.explorar-card b {
-    position: relative;
-    z-index: 1;
-    color: #fff;
-}
-
-.explorar-card span {
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
-.explorar-card h3 {
-    margin-top: 8px;
-    font-size: 1.5rem;
-}
-
-.explorar-card p {
-    margin: 4px 0 12px;
-    font-size: 0.9rem;
-}
-
-.explorar-card b {
-    color: var(--celeste);
-    font-size: 0.78rem;
-    letter-spacing: 1px;
-}
+.explorar-card span, .explorar-card h3, .explorar-card p, .explorar-card b { position: relative; z-index: 1; color: #fff; }
+.explorar-card span { font-size: 0.8rem; font-weight: bold; }
+.explorar-card h3 { margin-top: 8px; font-size: 1.5rem; }
+.explorar-card p { margin: 4px 0 12px; font-size: 0.9rem; }
+.explorar-card b { color: var(--celeste); font-size: 0.78rem; letter-spacing: 1px; }
 
 .explorar-card:hover {
     transform: translateY(-5px);
@@ -770,7 +554,6 @@ body[data-protected="true"] {
     box-shadow: 0 0 20px rgba(34, 211, 238, 0.12);
 }
 
-/* Introducción, Grieta, Posiciones, Campeones, Objetivos, Modos */
 .portal-main .introduccion-portal {
     padding: 40px;
     background: linear-gradient(120deg, var(--fondo-sec), #1b1530);
@@ -778,20 +561,9 @@ body[data-protected="true"] {
     border-radius: 18px;
 }
 
-.introduccion-texto {
-    max-width: 800px;
-}
-
-.introduccion-texto h2 {
-    font-size: 2.3rem;
-}
-
-.caracteristicas-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 25px;
-}
+.introduccion-texto { max-width: 800px; }
+.introduccion-texto h2 { font-size: 2.3rem; }
+.caracteristicas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 25px; }
 
 .caracteristica-card {
     display: flex;
@@ -805,20 +577,9 @@ body[data-protected="true"] {
     transition: 0.3s;
 }
 
-.caracteristica-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--violeta);
-}
-
-.caracteristica-card h3 {
-    margin-bottom: 8px;
-    color: var(--celeste);
-}
-
-.caracteristica-card p {
-    margin: 0;
-    font-size: 0.95rem;
-}
+.caracteristica-card:hover { transform: translateY(-4px); border-color: var(--violeta); }
+.caracteristica-card h3 { margin-bottom: 8px; color: var(--celeste); }
+.caracteristica-card p { margin: 0; font-size: 0.95rem; }
 
 .numero-card {
     display: block;
@@ -840,11 +601,7 @@ body[data-protected="true"] {
     border-radius: 18px;
 }
 
-.grieta-imagen,
-.objetivos-imagen {
-    overflow: hidden;
-    border-radius: 12px;
-}
+.grieta-imagen, .objetivos-imagen { overflow: hidden; border-radius: 12px; }
 
 .grieta-imagen img {
     display: block;
@@ -855,16 +612,8 @@ body[data-protected="true"] {
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.grieta-imagen:hover img {
-    transform: scale(1.04);
-    filter: brightness(0.95) saturate(0.95);
-}
-
-.grieta-info h3 {
-    margin-bottom: 12px;
-    color: var(--celeste);
-    font-size: 1.5rem;
-}
+.grieta-imagen:hover img { transform: scale(1.04); filter: brightness(0.95) saturate(0.95); }
+.grieta-info h3 { margin-bottom: 12px; color: var(--celeste); font-size: 1.5rem; }
 
 .dato-grieta {
     display: flex;
@@ -875,16 +624,8 @@ body[data-protected="true"] {
     color: var(--texto-sec);
 }
 
-.dato-grieta strong {
-    color: var(--texto);
-}
-
-.lineas-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    margin-top: 20px;
-}
+.dato-grieta strong { color: var(--texto); }
+.lineas-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; }
 
 .linea-card {
     padding: 18px;
@@ -902,14 +643,8 @@ body[data-protected="true"] {
     letter-spacing: 2px;
 }
 
-.linea-card h3 {
-    color: var(--celeste);
-}
-
-.linea-card p {
-    margin: 0;
-    font-size: 0.9rem;
-}
+.linea-card h3 { color: var(--celeste); }
+.linea-card p { margin: 0; font-size: 0.9rem; }
 
 .posiciones-mapa {
     display: grid;
@@ -932,28 +667,10 @@ body[data-protected="true"] {
     filter: brightness(0.9) saturate(0.95);
 }
 
-.posiciones-mapa span {
-    color: var(--celeste);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.posiciones-mapa h3 {
-    margin: 10px 0;
-    color: #fff;
-    font-size: 1.6rem;
-}
-
-.posiciones-mapa p {
-    margin: 0;
-}
-
-.posiciones-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 13px;
-}
+.posiciones-mapa span { color: var(--celeste); font-size: 0.78rem; font-weight: 800; letter-spacing: 2px; }
+.posiciones-mapa h3 { margin: 10px 0; color: #fff; font-size: 1.6rem; }
+.posiciones-mapa p { margin: 0; }
+.posiciones-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 13px; }
 
 .posicion-card {
     position: relative;
@@ -969,10 +686,7 @@ body[data-protected="true"] {
     transition: 0.3s;
 }
 
-.posicion-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--violeta);
-}
+.posicion-card:hover { transform: translateY(-5px); border-color: var(--violeta); }
 
 .posicion-numero {
     position: absolute;
@@ -997,16 +711,8 @@ body[data-protected="true"] {
     font-weight: 900;
 }
 
-.posicion-card h3 {
-    margin-top: 8px;
-    color: #fff;
-    font-size: 1.2rem;
-}
-
-.posicion-card p {
-    margin: 0;
-    font-size: 0.88rem;
-}
+.posicion-card h3 { margin-top: 8px; color: #fff; font-size: 1.2rem; }
+.posicion-card p { margin: 0; font-size: 0.88rem; }
 
 .campeones-portada {
     max-width: 850px;
@@ -1026,11 +732,7 @@ body[data-protected="true"] {
     filter: brightness(0.9) saturate(0.95);
 }
 
-.campeones-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
+.campeones-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
 
 .campeon-card {
     min-height: 185px;
@@ -1042,10 +744,7 @@ body[data-protected="true"] {
     transition: 0.3s;
 }
 
-.campeon-card:hover {
-    transform: translateY(-4px);
-    border-left-color: var(--celeste);
-}
+.campeon-card:hover { transform: translateY(-4px); border-left-color: var(--celeste); }
 
 .campeon-numero {
     margin-bottom: 8px;
@@ -1054,13 +753,8 @@ body[data-protected="true"] {
     font-weight: 900;
 }
 
-.campeon-card h3 {
-    color: var(--celeste);
-}
-
-.campeon-card p {
-    margin: 0;
-}
+.campeon-card h3 { color: var(--celeste); }
+.campeon-card p { margin: 0; }
 
 .campeon-card > span {
     display: inline-block;
@@ -1092,10 +786,7 @@ body[data-protected="true"] {
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.objetivos-imagen:hover img {
-    transform: scale(1.04);
-    filter: brightness(0.95) saturate(0.95);
-}
+.objetivos-imagen:hover img { transform: scale(1.04); filter: brightness(0.95) saturate(0.95); }
 
 .objetivos-contenido h2 {
     margin-bottom: 15px;
@@ -1112,20 +803,9 @@ body[data-protected="true"] {
     border-bottom: 1px solid var(--borde);
 }
 
-.objetivo-item > span {
-    min-width: 35px;
-    color: var(--rosa);
-    font-size: 1.1rem;
-    font-weight: 900;
-}
-
-.objetivo-item h3 {
-    color: var(--celeste);
-}
-
-.objetivo-item p {
-    margin: 0;
-}
+.objetivo-item > span { min-width: 35px; color: var(--rosa); font-size: 1.1rem; font-weight: 900; }
+.objetivo-item h3 { color: var(--celeste); }
+.objetivo-item p { margin: 0; }
 
 .objetivo-imagen-secundaria {
     display: block;
@@ -1139,11 +819,7 @@ body[data-protected="true"] {
     filter: brightness(0.85) saturate(0.88);
 }
 
-.modos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
+.modos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
 
 .modo-card {
     min-height: 180px;
@@ -1154,10 +830,7 @@ body[data-protected="true"] {
     transition: 0.3s;
 }
 
-.modo-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--celeste);
-}
+.modo-card:hover { transform: translateY(-5px); border-color: var(--celeste); }
 
 .modo-card > span {
     display: block;
@@ -1167,15 +840,13 @@ body[data-protected="true"] {
     font-weight: 900;
 }
 
-.modo-card h3 {
-    color: var(--rosa);
-}
+.modo-card h3 { color: var(--rosa); }
+.modo-card p { margin: 0; }
 
-.modo-card p {
-    margin: 0;
-}
+/* ========================================
+   CONSEJOS, PERFIL Y PIE DE PÁGINA
+======================================== */
 
-/* Consejos, Perfil y Pie de página */
 .portal-main .consejos-section {
     padding: 30px;
     background: linear-gradient(120deg, var(--fondo-sec), #1b1530);
@@ -1183,9 +854,7 @@ body[data-protected="true"] {
     border-radius: 18px;
 }
 
-.consejos-titulo {
-    margin-bottom: 20px;
-}
+.consejos-titulo { margin-bottom: 20px; }
 
 .consejos-lista {
     display: grid;
@@ -1209,33 +878,12 @@ body[data-protected="true"] {
     border-radius: 18px;
 }
 
-.perfil-intro,
-.perfil-form {
-    max-width: 700px;
-}
-
-.perfil-intro {
-    margin-bottom: 25px;
-}
-
-.campo-perfil {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-.campo-perfil label {
-    margin: 0;
-}
-
-.perfil-form button {
-    align-self: flex-start;
-    min-width: 180px;
-}
-
-.perfil-form #mensajeGamer {
-    color: var(--celeste);
-}
+.perfil-intro, .perfil-form { max-width: 700px; }
+.perfil-intro { margin-bottom: 25px; }
+.campo-perfil { display: flex; flex-direction: column; gap: 7px; }
+.campo-perfil label { margin: 0; }
+.perfil-form button { align-self: flex-start; min-width: 180px; }
+.perfil-form #mensajeGamer { color: var(--celeste); }
 
 .portal-footer {
     padding: 35px 20px;
@@ -1244,63 +892,22 @@ body[data-protected="true"] {
     text-align: center;
 }
 
-.portal-footer p {
-    margin: 5px 0;
-    color: var(--texto-sec);
-}
+.portal-footer p { margin: 5px 0; color: var(--texto-sec); }
 
 /* ========================================
    ADAPTACIÓN A PANTALLAS CHICAS
 ======================================== */
 
 @media (max-width: 900px) {
-    .hero-portal,
-    .grieta-panel,
-    .posiciones-mapa,
-    .objetivos-panel {
-        grid-template-columns: 1fr;
-    }
-
-    .explorar-grid,
-    .lineas-grid,
-    .caracteristicas-grid,
-    .campeones-grid,
-    .modos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .posiciones-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    .hero-portal, .grieta-panel, .posiciones-mapa, .objetivos-panel { grid-template-columns: 1fr; }
+    .explorar-grid, .lineas-grid, .caracteristicas-grid, .campeones-grid, .modos-grid { grid-template-columns: repeat(2, 1fr); }
+    .posiciones-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 600px) {
-    .portal-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .portal-nav {
-        justify-content: flex-start;
-    }
-
-    .portal-sidebar {
-        margin-top: 155px;
-    }
-
-    .explorar-grid,
-    .lineas-grid,
-    .caracteristicas-grid,
-    .campeones-grid,
-    .modos-grid,
-    .posiciones-grid,
-    .consejos-lista,
-    .operaciones {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-portal {
-        padding: 25px;
-    }
+    .portal-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .portal-nav { justify-content: flex-start; }
+    .portal-sidebar { margin-top: 165px; }
+    .explorar-grid, .lineas-grid, .caracteristicas-grid, .campeones-grid, .modos-grid, .posiciones-grid, .consejos-lista, .operaciones { grid-template-columns: 1fr; }
+    .hero-portal { padding: 25px; }
 }
