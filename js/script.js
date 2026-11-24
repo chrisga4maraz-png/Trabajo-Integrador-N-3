@@ -3,7 +3,6 @@
    Archivo principal de JavaScript
 ======================================== */
 
-
 /* ========================================
 1. CONFIGURACIÓN DE ACCESO
 ======================================== */
@@ -11,7 +10,6 @@
 const USUARIO_VALIDO = "chrisga_maraz@gmail.com";
 const PASSWORD_VALIDO = "987654321";
 const CLAVE_SESION = "gamingONadaSesion";
-
 
 /* ========================================
 2. PROTECCIÓN DE PÁGINAS INTERNAS
@@ -26,7 +24,6 @@ if (document.body.dataset.protected === "true") {
         window.location.replace("index.html");
     }
 }
-
 
 /* ========================================
 3. FORMULARIO DE INICIO DE SESIÓN
@@ -60,7 +57,6 @@ if (formularioLogin) {
         }
     });
 }
-
 
 /* ========================================
 4. CALCULADORA
@@ -156,7 +152,6 @@ if (formularioCalculadora) {
     });
 }
 
-
 /* ========================================
 5. FORMULARIO GAMER
 ======================================== */
@@ -185,7 +180,6 @@ if (formularioGamer) {
         formularioGamer.reset();
     });
 }
-
 
 /* ========================================
 6. CONTROL DE VENTANAS MODALES
