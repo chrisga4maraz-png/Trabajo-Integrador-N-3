@@ -81,7 +81,14 @@ if (formularioCalculadora) {
 
         boton.addEventListener("click", function () {
 
-            if (!numero1.value || !numero2.value) {
+            if (!formularioCalculadora.checkValidity()) {
+
+                formularioCalculadora.reportValidity();
+
+                return;
+            }
+
+            if (numero1.value === "" || numero2.value === "") {
 
                 mensaje.textContent = "Completá los dos números antes de continuar.";
                 mensaje.style.color = "#ec4899";
@@ -90,17 +97,19 @@ if (formularioCalculadora) {
                 return;
             }
 
-            if (!formularioCalculadora.checkValidity()) {
+            const valor1 = Number(numero1.value);
+            const valor2 = Number(numero2.value);
 
-                formularioCalculadora.reportValidity();
+            if (Number.isNaN(valor1) || Number.isNaN(valor2)) {
+
+                mensaje.textContent = "Ingresá valores numéricos válidos.";
+                mensaje.style.color = "#ec4899";
+                resultado.value = "";
 
                 return;
             }
 
-            const valor1 = Number(numero1.value);
-            const valor2 = Number(numero2.value);
             const operacion = boton.dataset.operacion;
-
             let calculo;
 
             switch (operacion) {
@@ -179,19 +188,88 @@ if (formularioGamer) {
 
 
 /* ========================================
-6. FORMULARIO DE CONTACTO
+6. CONTROL DE VENTANAS MODALES
+======================================== */
+
+const modalesAbiertos = [];
+
+function abrirModal(modal, elementoFoco) {
+
+    if (!modal) {
+        return;
+    }
+
+    modal.hidden = false;
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    if (!modalesAbiertos.includes(modal)) {
+        modalesAbiertos.push(modal);
+    }
+
+    if (elementoFoco) {
+        elementoFoco.focus();
+    }
+}
+
+function cerrarModal(modal) {
+
+    if (!modal) {
+        return;
+    }
+
+    modal.hidden = true;
+    modal.setAttribute("aria-hidden", "true");
+
+    const indice = modalesAbiertos.indexOf(modal);
+    if (indice !== -1) {
+        modalesAbiertos.splice(indice, 1);
+    }
+
+    if (modalesAbiertos.length === 0) {
+        document.body.style.overflow = "";
+    }
+}
+
+function vincularCierreModal(modal, botonCerrar) {
+
+    if (!modal) {
+        return;
+    }
+
+    if (botonCerrar) {
+        botonCerrar.addEventListener("click", function () {
+            cerrarModal(modal);
+        });
+    }
+
+    modal.addEventListener("click", function (evento) {
+        if (evento.target === modal) {
+            cerrarModal(modal);
+        }
+    });
+}
+
+document.addEventListener("keydown", function (evento) {
+
+    if (evento.key === "Escape" && modalesAbiertos.length > 0) {
+        const ultimoModal = modalesAbiertos[modalesAbiertos.length - 1];
+        cerrarModal(ultimoModal);
+    }
+});
+
+
+/* ========================================
+7. FORMULARIO DE CONTACTO Y CALCULADORA MODAL
 ======================================== */
 
 const formularioContacto = document.getElementById("formContacto");
-
 const ventanaConfirmacion = document.getElementById("ventanaConfirmacion");
-
 const botonCerrarConfirmacion = document.getElementById("cerrarConfirmacion");
-
 
 if (formularioContacto && ventanaConfirmacion && botonCerrarConfirmacion) {
 
-    // ENVIAR FORMULARIO
+    vincularCierreModal(ventanaConfirmacion, botonCerrarConfirmacion);
 
     formularioContacto.addEventListener("submit", function (evento) {
 
@@ -204,74 +282,10 @@ if (formularioContacto && ventanaConfirmacion && botonCerrarConfirmacion) {
             return;
         }
 
-        // Limpiar los campos después de completar el envío.
-
         formularioContacto.reset();
-
-        // Mostrar la ventana de confirmación.
-
-        ventanaConfirmacion.hidden = false;
-        ventanaConfirmacion.setAttribute("aria-hidden", "false");
-
-        // Evitar el desplazamiento de la página.
-
-        document.body.style.overflow = "hidden";
-
-        // Llevar el foco al botón de confirmación.
-
-        botonCerrarConfirmacion.focus();
+        abrirModal(ventanaConfirmacion, botonCerrarConfirmacion);
     });
-
-
-    // CERRAR CON EL BOTÓN ACEPTAR
-
-    function cerrarVentanaConfirmacion() {
-
-        ventanaConfirmacion.hidden = true;
-        ventanaConfirmacion.setAttribute("aria-hidden", "true");
-
-        document.body.style.overflow = "";
-
-    }
-
-    botonCerrarConfirmacion.addEventListener("click", function () {
-
-        cerrarVentanaConfirmacion();
-
-    });
-
-
-    // CERRAR AL PRESIONAR FUERA DE LA VENTANA
-
-    ventanaConfirmacion.addEventListener("click", function (evento) {
-
-        if (evento.target === ventanaConfirmacion) {
-
-            cerrarVentanaConfirmacion();
-
-        }
-
-    });
-
-
-    // CERRAR CON LA TECLA ESCAPE
-
-    document.addEventListener("keydown", function (evento) {
-
-        if (evento.key === "Escape" && !ventanaConfirmacion.hidden) {
-
-            cerrarVentanaConfirmacion();
-
-        }
-
-    });
-
 }
-
-
-/* ========================================
-7. APERTURA Y CIERRE DE CALCULADORA
-======================================== */
 
 const botonAbrirCalculadora = document.getElementById("abrirCalculadora");
 const botonCerrarCalculadora = document.getElementById("cerrarCalculadora");
@@ -279,33 +293,9 @@ const ventanaCalculadora = document.getElementById("ventanaCalculadora");
 
 if (botonAbrirCalculadora && ventanaCalculadora && botonCerrarCalculadora) {
 
-    // Abrir calculadora
+    vincularCierreModal(ventanaCalculadora, botonCerrarCalculadora);
+
     botonAbrirCalculadora.addEventListener("click", function () {
-        ventanaCalculadora.hidden = false;
-        ventanaCalculadora.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-    });
-
-    // Cerrar calculadora
-    function cerrarCalculadora() {
-        ventanaCalculadora.hidden = true;
-        ventanaCalculadora.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-    }
-
-    botonCerrarCalculadora.addEventListener("click", cerrarCalculadora);
-
-    // Cerrar al pulsar fuera de la ventana
-    ventanaCalculadora.addEventListener("click", function (evento) {
-        if (evento.target === ventanaCalculadora) {
-            cerrarCalculadora();
-        }
-    });
-
-    // Cerrar con Escape
-    document.addEventListener("keydown", function (evento) {
-        if (evento.key === "Escape" && !ventanaCalculadora.hidden) {
-            cerrarCalculadora();
-        }
+        abrirModal(ventanaCalculadora);
     });
 }
